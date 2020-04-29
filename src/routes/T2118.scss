@@ -1,0 +1,267 @@
+@import "./sass/anker.scss";
+
+.Cable {
+  background-color: #fcf6e8;
+  h1 {
+    color: #21d2c5;
+    font-size: 42px;
+    text-align: center;
+    margin: 0;
+    @media (max-width: $maxPhoneWidth) {
+      font-size: 21px;
+    }
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  .section {
+    position: relative;
+    box-sizing: border-box;
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  .banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      display: block;
+      @media (max-width: $maxPhoneWidth) {
+        &.img {
+          width: 200%;
+          margin-left: -50%;
+        }
+      }
+    }
+  }
+  .section1back {
+    background-image: url(https://dz02g1kgtiysz.cloudfront.net/deals/files/191031_100703_section1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 6rem;
+    @media (max-width: $maxPhoneWidth) {
+      padding-top: 1rem;
+    }
+  }
+  .section1 {
+    display: flex;
+    padding: 5rem 5rem 6rem 5rem;
+    background-color: #fff;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+    @media (max-width: $maxPhoneWidth) {
+      display: block;
+      width: 95%;
+      padding: 1rem 0;
+      margin: 0 auto;
+    }
+    p {
+      color: #9fa0a0;
+      font-size: 14px;
+    }
+    .imgp {
+      width: 350px;
+      height: auto;
+      flex-grow: 0;
+      @media (max-width: $maxPhoneWidth) {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+    .box {
+      box-sizing: border-box;
+      width: auto;
+      margin-left: 50px;
+      flex-grow: 1;
+      @media (max-width: $maxPhoneWidth) {
+        width: 100%;
+        padding: 15px;
+        margin-left: 0;
+      }
+      h2 {
+        color: #21d2c5;
+        font-size: 26px;
+        margin: 0 0 2.5rem 0;
+        @media (max-width: $maxPhoneWidth) {
+          font-size: 18px;
+        }
+      }
+    }
+    .progressBack {
+      position: relative;
+      width: 100%;
+      height: 25px;
+      background: #efefef;
+      border-radius: 15px;
+      $w: 50%;
+      .progress {
+        width: $w;
+        height: 25px;
+        background: linear-gradient(
+          to right,
+          #4291e4 0%,
+          #23b3d5 50%,
+          #04d5c7 100%
+        );
+        border-radius: 15px;
+      }
+      .backline {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $w;
+        height: 25px;
+        background-image: url(https://dz02g1kgtiysz.cloudfront.net/deals/files/191031_141016_.png);
+        border-radius: 15px;
+        background-repeat: repeat-x;
+        background-size: auto 100%;
+      }
+    }
+    .flex {
+      display: flex;
+      position: relative;
+      .start {
+        width: 40px;
+        flex-grow: 0;
+      }
+      .end {
+        width: 30px;
+        text-align: right;
+        flex-grow: 0;
+      }
+      .curent {
+        flex-grow: 1;
+        b {
+          position: absolute;
+          top: 14px;
+        }
+      }
+    }
+    .share {
+      margin: 30px 0;
+      @media (max-width: $maxPhoneWidth) {
+        margin: 10px 0;
+      }
+      p {
+        font-size: 18px;
+        margin: 0;
+      }
+    }
+    .btn {
+      display: inline-block;
+      color: #fff;
+      font-size: 18px;
+      padding: 5px 20px;
+      border-radius: 20px;
+      margin-top: 30px;
+      background: linear-gradient(
+        to top,
+        #ff754a 0%,
+        #ff754a 50%,
+        #ffac3e 100%
+      );
+      @media (max-width: $maxPhoneWidth) {
+        margin: 10px 0;
+      }
+    }
+  }
+  .section2back {
+    background-image: url(https://dz02g1kgtiysz.cloudfront.net/deals/files/191031_100708_section2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .section2 {
+    padding: 6rem 30px;
+    @media (max-width: $maxPhoneWidth) {
+      padding: 3rem 15px;
+    }
+    h1 {
+      text-align: left;
+      margin-bottom: 15px;
+    }
+    li {
+      all: unset;
+      display: block;
+      font-size: 15px;
+      font-weight: 500;
+      margin: 12px 0;
+    }
+  }
+  .section3back {
+    padding: 2rem 0 8rem 0;
+    background-image: url(https://dz02g1kgtiysz.cloudfront.net/deals/files/191031_100712_section3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .section3 {
+    padding: 4rem;
+    background-color: #fff;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+    @media (max-width: $maxPhoneWidth) {
+      width: 95%;
+      padding: 2rem 0;
+      margin: 0 auto;
+    }
+    .subicon {
+      width: 90px;
+      position: absolute;
+      top: 0;
+      left: 3rem;
+      transform: translateY(-50%);
+      @media (max-width: $maxPhoneWidth) {
+        left: 1rem;
+        width: 50px;
+      }
+    }
+    ul {
+      padding-top: 4rem;
+      @media (max-width: $maxPhoneWidth) {
+        padding: 0;
+      }
+    }
+    li {
+      all: unset;
+      display: block;
+      box-sizing: border-box;
+      text-align: center;
+      float: left;
+      width: 33.3%;
+      line-height: 40px;
+      padding: 0 15px;
+      @media (max-width: $maxPhoneWidth) {
+        width: 100%;
+        padding: 20px 30px;
+      }
+      img {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+      }
+      h3 {
+        color: #636363;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.2rem;
+        text-align: left;
+        margin: 30px 0 20px 0;
+        @media (max-width: $maxPhoneWidth) {
+          margin: 15px 0 10px 0;
+          font-size: 14px;
+        }
+      }
+      p {
+        color: #818181;
+        font-size: 14px;
+        line-height: 1.4rem;
+        text-align: left;
+        margin: 0;
+        @media (max-width: $maxPhoneWidth) {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}

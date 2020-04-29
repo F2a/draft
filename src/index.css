@@ -1,0 +1,29 @@
+
+html, body, :global(#root) {
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  color: #323232;
+  line-height: 1.2;
+  font-family: Whitney;
+  -webkit-font-smoothing: antialiased;
+}
+:global(.nav) {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-sizing: border-box;
+  height: 108px;
+  background-color: #ccc;
+  border-bottom: 1px solid #323232;
+}
+:global(.flexBox) {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+:global(.flex) {
+  flex: 1;
+  padding: 20px 0;
+  box-sizing: border-box;
+}

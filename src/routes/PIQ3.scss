@@ -1,0 +1,1728 @@
+@import "./sass/anker.scss";
+
+$color: #00a7e1;
+$colorgray: #868686;
+$bcolor: #002645;
+
+:global(.wrap) {
+  margin: 0 auto;
+}
+.deal {
+  line-height: 1.4;
+  a {
+    color: $color;
+  }
+  img {
+    max-width: 100%;
+  }
+  video {
+    vertical-align: top;
+  }
+}
+$gray1: #989898;
+$gray2: #b1b1b1;
+$gray3: #ccc;
+$gray4: #ebebeb;
+$borderwidth: 25px;
+$radius: 400px;
+$powerDelivery: $radius - 70;
+$quickCharge: $radius - 140;
+$stockCharge: $radius - 210;
+.circleBox {
+  height: $radius;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  position: relative;
+  h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $gray1;
+    font-size: 30px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+    padding: 0;
+  }
+  p {
+    color: $gray1;
+    width: 50px;
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .c1h {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate($radius * 0.5 + 50, -50%);
+  }
+  .c2h {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, $radius * 0.5 + 10);
+  }
+  .c3h {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate($radius * -0.5, -50%);
+  }
+  .circleProgress_wrapper {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    width: $radius;
+    height: $radius;
+    border: $borderwidth solid $gray4;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    div {
+      box-sizing: border-box;
+    }
+    &.powerDelivery {
+      top: $borderwidth + 10;
+      width: $powerDelivery;
+      height: $powerDelivery;
+      .wrapper {
+        width: $powerDelivery * 0.5;
+        height: $powerDelivery;
+        top: $borderwidth * -1;
+      }
+      .circleProgress {
+        width: $powerDelivery;
+        height: $powerDelivery;
+        border: $borderwidth solid transparent;
+      }
+      .rightcircle {
+        border-top: $borderwidth solid $gray1;
+        border-right: $borderwidth solid $gray1;
+        right: 0;
+      }
+      .leftcircle {
+        border-bottom: $borderwidth solid $gray1;
+        border-left: $borderwidth solid $gray1;
+      }
+    }
+    &.quickCharge {
+      top: ($borderwidth + 10) * 2;
+      width: $quickCharge;
+      height: $quickCharge;
+      .wrapper {
+        width: $quickCharge * 0.5;
+        height: $quickCharge;
+        top: $borderwidth * -1;
+      }
+      .circleProgress {
+        width: $quickCharge;
+        height: $quickCharge;
+        border: $borderwidth solid transparent;
+      }
+      .rightcircle {
+        border-top: $borderwidth solid $gray2;
+        border-right: $borderwidth solid $gray2;
+        right: 0;
+      }
+      .leftcircle {
+        border-bottom: $borderwidth solid $gray2;
+        border-left: $borderwidth solid $gray2;
+      }
+    }
+    &.stockCharge {
+      top: ($borderwidth + 10) * 3;
+      width: $stockCharge;
+      height: $stockCharge;
+      .wrapper {
+        width: $stockCharge * 0.5;
+        height: $stockCharge;
+        top: $borderwidth * -1;
+      }
+      .circleProgress {
+        width: $stockCharge;
+        height: $stockCharge;
+        border: $borderwidth solid transparent;
+      }
+      .rightcircle {
+        border-top: $borderwidth solid $gray3;
+        border-right: $borderwidth solid $gray3;
+        right: 0;
+      }
+      .leftcircle {
+        border-bottom: $borderwidth solid $gray3;
+        border-left: $borderwidth solid $gray3;
+      }
+    }
+  }
+  .wrapper {
+    width: $radius * 0.5;
+    height: $radius;
+    position: absolute;
+    top: $borderwidth * -1;
+    overflow: hidden;
+  }
+  .right {
+    right: $borderwidth * -1;
+  }
+  .left {
+    left: $borderwidth * -1;
+  }
+  .circleProgress {
+    width: $radius;
+    height: $radius;
+    box-sizing: content-box;
+    border: $borderwidth solid transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+  }
+  .rightcircle {
+    border-top: $borderwidth solid $color;
+    border-right: $borderwidth solid $color;
+    right: 0;
+  }
+  .leftcircle {
+    border-bottom: $borderwidth solid $color;
+    border-left: $borderwidth solid $color;
+    left: 0;
+  }
+}
+@media (max-width: $maxPhoneWidth) {
+  $radius: 250px;
+  $powerDelivery: $radius - 50;
+  $quickCharge: $radius - 100;
+  $stockCharge: $radius - 150;
+  $borderwidth: 15px;
+  .circleBox {
+    height: $radius;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    position: relative;
+    h3 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $gray1;
+      font-size: 18px;
+      height: 40px;
+      line-height: 40px;
+      margin: 0;
+      padding: 0;
+    }
+    p {
+      color: $gray1;
+      width: 30px;
+      font-size: 16px;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    .c1h {
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate($radius * 0.5 + 30, -50%);
+    }
+    .c2h {
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, $radius * 0.5 + 10);
+    }
+    .c3h {
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate($radius * -0.5, -50%);
+    }
+    .circleProgress_wrapper {
+      box-sizing: border-box;
+      position: absolute;
+      top: 0;
+      width: $radius;
+      height: $radius;
+      border: $borderwidth solid $gray4;
+      border-radius: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      div {
+        box-sizing: border-box;
+      }
+      &.powerDelivery {
+        top: $borderwidth + 10;
+        width: $powerDelivery;
+        height: $powerDelivery;
+        .wrapper {
+          width: $powerDelivery * 0.5;
+          height: $powerDelivery;
+          top: $borderwidth * -1;
+        }
+        .circleProgress {
+          width: $powerDelivery;
+          height: $powerDelivery;
+          border: $borderwidth solid transparent;
+        }
+        .rightcircle {
+          border-top: $borderwidth solid $gray1;
+          border-right: $borderwidth solid $gray1;
+          right: 0;
+        }
+        .leftcircle {
+          border-bottom: $borderwidth solid $gray1;
+          border-left: $borderwidth solid $gray1;
+        }
+      }
+      &.quickCharge {
+        top: ($borderwidth + 10) * 2;
+        width: $quickCharge;
+        height: $quickCharge;
+        .wrapper {
+          width: $quickCharge * 0.5;
+          height: $quickCharge;
+          top: $borderwidth * -1;
+        }
+        .circleProgress {
+          width: $quickCharge;
+          height: $quickCharge;
+          border: $borderwidth solid transparent;
+        }
+        .rightcircle {
+          border-top: $borderwidth solid $gray2;
+          border-right: $borderwidth solid $gray2;
+          right: 0;
+        }
+        .leftcircle {
+          border-bottom: $borderwidth solid $gray2;
+          border-left: $borderwidth solid $gray2;
+        }
+      }
+      &.stockCharge {
+        top: ($borderwidth + 10) * 3;
+        width: $stockCharge;
+        height: $stockCharge;
+        .wrapper {
+          width: $stockCharge * 0.5;
+          height: $stockCharge;
+          top: $borderwidth * -1;
+        }
+        .circleProgress {
+          width: $stockCharge;
+          height: $stockCharge;
+          border: $borderwidth solid transparent;
+        }
+        .rightcircle {
+          border-top: $borderwidth solid $gray3;
+          border-right: $borderwidth solid $gray3;
+          right: 0;
+        }
+        .leftcircle {
+          border-bottom: $borderwidth solid $gray3;
+          border-left: $borderwidth solid $gray3;
+        }
+      }
+    }
+    .wrapper {
+      width: $radius * 0.5;
+      height: $radius;
+      position: absolute;
+      top: $borderwidth * -1;
+      overflow: hidden;
+    }
+    .right {
+      right: $borderwidth * -1;
+    }
+    .left {
+      left: $borderwidth * -1;
+    }
+    .circleProgress {
+      width: $radius;
+      height: $radius;
+      box-sizing: content-box;
+      border: $borderwidth solid transparent;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+    }
+    .rightcircle {
+      border-top: $borderwidth solid $color;
+      border-right: $borderwidth solid $color;
+      right: 0;
+    }
+    .leftcircle {
+      border-bottom: $borderwidth solid $color;
+      border-left: $borderwidth solid $color;
+      left: 0;
+    }
+  }
+}
+.legend {
+  width: 635px;
+  margin: 0 auto;
+  padding: 5px 0 50px 30px;
+  overflow: hidden;
+  @media (max-width: $maxPhoneWidth) {
+    width: 300px;
+  }
+  .col {
+    height: 20px;
+    float: left;
+    overflow: hidden;
+    padding-right: 20px;
+    margin-top: 10px;
+    @media (max-width: $maxPhoneWidth) {
+      width: 130px;
+      padding: 0 10px 0 10px;
+    }
+    span {
+      float: left;
+      width: 40px;
+      height: 14px;
+      margin-right: 5px;
+      background-color: $color;
+      @media (max-width: $maxPhoneWidth) {
+        width: 30px;
+        height: 12px;
+      }
+    }
+    p {
+      float: left;
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+      line-height: 14px;
+      text-align: left;
+      word-break: keep-all;
+      white-space: nowrap;
+      @media (max-width: $maxPhoneWidth) {
+        font-size: 12px;
+        line-height: 12px;
+      }
+    }
+    .powerDelivery {
+      background-color: $gray1;
+    }
+    .quickCharge {
+      background-color: $gray2;
+    }
+    .stockCharge {
+      background-color: $gray3;
+    }
+  }
+}
+.fixVideo {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  .mask {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: url("https://dz02g1kgtiysz.cloudfront.net/deals/files/190530_090839_banner-01.svg");
+    background-size: cover;
+    background-position: center;
+    transition: opacity 300ms;
+    transform-origin: 50% 70%;
+    @media (max-width: $maxPhoneWidth) {
+      background-image: url("https://dz02g1kgtiysz.cloudfront.net/deals/files/190528_152338_.png");
+    }
+  }
+  .player {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    video {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      object-fit: cover;
+    }
+  }
+  .mainTitle {
+    z-index: 1;
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 500ms;
+    color: #92fdfd;
+    text-align: center;
+    p {
+      margin: 10px 0 0 0;
+      font-size: 2.2vw;
+      font-family: impact, Whitney, Helvetica, Arial, sans-serif;
+      @media (max-width: $maxPhoneWidth) {
+        font-size: 2.2rem;
+      }
+    }
+    h1 {
+      margin: 0;
+      line-height: 7rem;
+      font-size: 6vw;
+      font-family: impact, Whitney, Helvetica, Arial, sans-serif;
+      @media (max-width: $maxPhoneWidth) {
+        font-size: 6.5rem;
+      }
+    }
+  }
+}
+.section {
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 30px;
+    b {
+      font-size: 48px;
+      @media (max-width: $maxPhoneWidth) {
+        font-size: 20px;
+        margin-bottom: 1.5rem;
+      }
+    }
+    @media (max-width: $maxPhoneWidth) {
+      font-size: 20px;
+      margin-bottom: 1.5rem;
+    }
+  }
+  a {
+    color: #323232;
+    display: block;
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 4rem;
+  }
+  p {
+    text-align: center;
+    @media (max-width: $maxPhoneWidth) {
+      font-size: 12px;
+      margin-bottom: 1.5rem;
+    }
+  }
+  // add
+  .sectionBottom {
+    p {
+      color: #888;
+    }
+    a {
+      color: #888;
+      margin-top: 10px;
+    }
+  }
+  &.sectionModel {
+    background-color: #000;
+    background-image: url("https://dz02g1kgtiysz.cloudfront.net/deals/files/190523_115438_back.png");
+    background-position: center;
+    background-size: cover;
+    $selSize: 90px;
+    $selSizeMedia: 56px;
+    $fsizePro: 2.4rem;
+    $fsize: 1.1rem;
+    $btnsize: 1.6rem;
+    .selectModal {
+      color: #fff;
+      transition: 600ms;
+      p {
+        margin: 0;
+        padding: 0;
+        @media (max-width: $maxPhoneWidth) {
+          font-size: 14px;
+        }
+      }
+      div {
+        box-sizing: border-box;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .content {
+        height: $selSize * 7.5;
+        padding-top: 20px;
+      }
+      .readybtn {
+        font-size: $btnsize;
+        background-image: url("https://dz02g1kgtiysz.cloudfront.net/deals/files/190523_133401_btn.png");
+        margin-top: 50px;
+        p {
+          height: 54px;
+          line-height: 54px;
+          width: $selSize * 3;
+          margin: 0 auto;
+          cursor: pointer;
+        }
+      }
+      .seltitle {
+        height: $selSize * 1.6;
+        background-image: url("https://dz02g1kgtiysz.cloudfront.net/deals/files/190523_133435_title.png");
+        font-size: $fsizePro;
+        padding-top: $selSize * 0.2;
+        @media (max-width: $maxPhoneWidth) {
+          height: $selSizeMedia * 1.6;
+        }
+      }
+      .selcon {
+        width: 72%;
+        margin: 0 auto;
+        @media (max-width: $maxPhoneWidth) {
+          display: block;
+          width: 350px;
+        }
+      }
+      .sel {
+        width: 50%;
+        background-image: url("https://dz02g1kgtiysz.cloudfront.net/deals/files/190523_115452_border.png");
+        font-size: $fsize;
+        @media (max-width: $maxPhoneWidth) {
+          width: 100%;
+          margin-bottom: 20px;
+          background-size: 100% 100%;
+        }
+        .cartitle {
+          height: $selSize * 0.75;
+          background-image: url("https://dz02g1kgtiysz.cloudfront.net/deals/files/190523_161212_-6--13.png");
+          font-size: 1.3rem;
+          padding-top: $selSize * 0.15;
+        }
+        .carcontent {
+          position: relative;
+          height: $selSize * 3.5;
+          padding: $selSize * 0.2;
+          background-image: url("https://dz02g1kgtiysz.cloudfront.net/deals/files/190523_162055_-1168.png");
+          background-position-y: $selSize * 0.85;
+          background-size: 50%;
+          &.mancontent {
+            background-image: url("https://dz02g1kgtiysz.cloudfront.net/deals/files/190523_162109_-1168-.png");
+            background-position-y: $selSize * 0.88;
+          }
+          .carp {
+            color: #1bfefb;
+          }
+          .carPointer {
+            display: flex;
+            width: 34.5%;
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            .cols {
+              flex: 1;
+              div {
+                box-sizing: content-box;
+                width: 10px;
+                height: 10px;
+                padding: 3px;
+                margin: 0 auto;
+                border-radius: 50%;
+              }
+            }
+            b {
+              display: block;
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+            }
+            &.manPointer {
+              width: 30%;
+            }
+          }
+          .swipe {
+            position: relative;
+            width: $selSize * 2;
+            margin: 0 auto;
+            img {
+              display: block;
+              margin: 0 auto;
+              margin-top: $selSize * 0.85;
+              width: $selSize * 1.7;
+              height: $selSize * 0.73;
+              &.manImg {
+                margin-top: $selSize * 0.35;
+                width: $selSize * 0.56;
+                height: $selSize * 1.8;
+              }
+            }
+            a {
+              width: 0;
+              height: 0;
+              position: absolute;
+              cursor: pointer;
+              top: $selSize;
+            }
+            .next {
+              border-top: 12px solid transparent;
+              border-left: 12px solid #1bfefb;
+              border-bottom: 12px solid transparent;
+              right: $selSize * -0.4;
+            }
+            .pre {
+              border-top: 12px solid transparent;
+              border-right: 12px solid #1bfefb;
+              border-bottom: 12px solid transparent;
+              left: $selSize * -0.4;
+            }
+          }
+        }
+        @media (max-width: $maxPhoneWidth) {
+          $selSize: 90px;
+          .cartitle {
+            box-sizing: border-box;
+            width: 100%;
+            margin: 0 auto;
+            height: $selSize * 0.74;
+            background-size: cover;
+            padding-top: $selSize * 0.15;
+            border-radius: 5px;
+            border: 1px solid transparent;
+          }
+          .carcontent {
+            position: relative;
+            width: 100%;
+            height: $selSize * 2;
+            padding: 10px;
+            background-position: 34px $selSize * 0.35;
+            background-size: 40%;
+            &.mancontent {
+              background-image: url("https://dz02g1kgtiysz.cloudfront.net/deals/files/190523_162109_-1168-.png");
+              background-position: 23px $selSize * 0.33;
+            }
+            .carp {
+              color: #1bfefb;
+            }
+            .carPointer {
+              display: flex;
+              width: 30%;
+              position: absolute;
+              bottom: 5%;
+              left: 30%;
+              transform: translateX(-50%);
+              .cols {
+                flex: 1;
+                div {
+                  box-sizing: content-box;
+                  width: 8px;
+                  height: 8px;
+                  padding: 2px;
+                  margin: 0 auto;
+                  border-radius: 50%;
+                }
+              }
+              b {
+                display: block;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+              }
+              &.manPointer {
+                left: 28%;
+                width: 20%;
+              }
+            }
+            .swipe {
+              position: relative;
+              width: 300px;
+              margin: 0 auto;
+              .boxCard {
+                position: relative;
+                overflow: hidden;
+                width: 300px;
+              }
+              .nameSwiper {
+                float: right;
+                margin-top: $selSize * 0.7;
+                margin-right: 15px;
+              }
+              img {
+                float: left;
+                $selSize: 60px;
+                display: block;
+                margin: 0 auto;
+                margin-top: $selSize * 1;
+                margin-left: 28px;
+                width: $selSize * 1.7;
+                height: $selSize * 0.73;
+                &.manImg {
+                  width: $selSize * 0.56;
+                  height: $selSize * 1.8;
+                  margin-top: $selSize * 0.4;
+                  margin-left: 48px;
+                }
+              }
+              a {
+                width: 0;
+                height: 0;
+                position: absolute;
+                cursor: pointer;
+                top: $selSize * 0.5;
+              }
+              .next {
+                border-top: 12px solid transparent;
+                border-left: 12px solid #1bfefb;
+                border-bottom: 12px solid transparent;
+                right: -3.5%;
+              }
+              .pre {
+                border-top: 12px solid transparent;
+                border-right: 12px solid #1bfefb;
+                border-bottom: 12px solid transparent;
+                left: -3.5%;
+              }
+            }
+          }
+        }
+      }
+    }
+    .contentmosd {
+      color: #fff;
+      position: relative;
+      transition: 600ms;
+      p {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        box-sizing: border-box;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .content {
+        width: 100%;
+        height: $selSize * 6;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        @media (max-width: $maxPhoneWidth) {
+          transform: translateY(-35%);
+        }
+      }
+      .readybtn {
+        font-size: $btnsize;
+        background-image: url("https://dz02g1kgtiysz.cloudfront.net/deals/files/190523_162153_start.png");
+        margin-top: 50px;
+        p {
+          height: 54px;
+          line-height: 54px;
+          width: $selSize * 3;
+          margin: 0 auto;
+          cursor: pointer;
+        }
+      }
+      .race {
+        $num: 1.6;
+        position: relative;
+        height: $selSize * 6;
+        background-image: url("https://dz02g1kgtiysz.cloudfront.net/deals/files/190523_161027_.png");
+        background-size: 100% 100%;
+        margin-bottom: $selSize;
+        @media (min-width: 2000px) {
+          height: $selSize * 7;
+        }
+        @media (min-width: 2300px) {
+          height: $selSize * 8;
+        }
+        .car {
+          position: absolute;
+          height: $num * 26px;
+          width: $num * 60px;
+          transform: scale(-1, 1);
+          transition: left 3s ease;
+        }
+        .ankercar {
+          background-image: url("https://dz02g1kgtiysz.cloudfront.net/deals/files/190523_161405_.png");
+          top: 60%;
+          left: 14.5%;
+          .pop {
+            background-image: url("https://dz02g1kgtiysz.cloudfront.net/deals/files/190523_175319_pop1.png");
+          }
+        }
+        .other {
+          background-image: url("https://dz02g1kgtiysz.cloudfront.net/deals/files/190523_161806_.png");
+          top: 20%;
+          left: 18%;
+          .pop {
+            background-image: url("https://dz02g1kgtiysz.cloudfront.net/deals/files/190523_175327_pop2.png");
+          }
+        }
+        .pop {
+          position: absolute;
+          top: $num * -43px;
+          right: -25px;
+          width: $num * 95px;
+          height: 70px;
+          transform: scale(-1, 1);
+          padding-top: 15px;
+          p {
+            font-size: 14px;
+            font-weight: 600;
+          }
+        }
+        .huo {
+          transform: scale(-1, 1);
+          transition: 500ms;
+          background-image: url("https://dz02g1kgtiysz.cloudfront.net/deals/files/190523_162354_.png");
+          position: absolute;
+          width: 50px;
+          height: 30px;
+          left: $num * 52px;
+          top: $num * 10px;
+        }
+        .result0 {
+          left: 80%;
+        }
+        .result1 {
+          left: 20%;
+        }
+        .result2 {
+          left: 45%;
+        }
+        .result3 {
+          left: 60%;
+        }
+        .result4 {
+          left: 76%;
+        }
+      }
+      @media (max-width: $maxPhoneWidth) {
+        .race {
+          $num: 1.1;
+          height: $selSize * 5;
+          margin-bottom: $selSize;
+          background-image: url("https://dz02g1kgtiysz.cloudfront.net/deals/files/190527_174818_sanmo.png");
+          .car {
+            height: $num * 26px;
+            width: $num * 60px;
+          }
+          .ankercar {
+            top: 55%;
+            left: 3%;
+          }
+          .other {
+            background-image: url("https://dz02g1kgtiysz.cloudfront.net/deals/files/190523_161806_.png");
+            top: 20%;
+            left: 7%;
+          }
+          .pop {
+            top: $num * -52px;
+            right: -12px;
+            width: $num * 95px;
+            height: 70px;
+            transform: scale(-1, 1);
+            padding-top: 18px;
+            p {
+              font-size: 10px;
+            }
+          }
+          .huo {
+            left: $num * 50px;
+            top: $num * 4px;
+          }
+          .result0 {
+            left: 80%;
+          }
+          .result1 {
+            left: 20%;
+          }
+          .result2 {
+            left: 45%;
+          }
+          .result3 {
+            left: 60%;
+          }
+          .result4 {
+            left: 76%;
+          }
+        }
+      }
+    }
+    .contentResult {
+      transition: 600ms;
+      color: #fff;
+      transition: 600ms;
+      p {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        box-sizing: border-box;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        .close {
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          right: 23%;
+          top: 18%;
+          cursor: pointer;
+          background-image: url("https://dz02g1kgtiysz.cloudfront.net/deals/files/190529_145031_.png");
+          @media (max-width: $maxPhoneWidth) {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: 5%;
+            top: 11%;
+          }
+        }
+      }
+      .footer {
+        padding-bottom: 15px;
+        transform: scale(0.9, 0.9);
+        p {
+          font-size: 10px;
+          color: $colorgray;
+          margin-top: 2px;
+        }
+      }
+      .contentResultying {
+        height: $selSize * 11;
+        background-image: url("https://dz02g1kgtiysz.cloudfront.net/deals/files/190523_162839_.png");
+        @media (max-width: $maxPhoneWidth) {
+          background-image: url("https://dz02g1kgtiysz.cloudfront.net/deals/files/190527_174743_yingmo.png");
+          height: $selSize * 9;
+        }
+        &.contentResultping {
+          background-image: url("https://dz02g1kgtiysz.cloudfront.net/deals/files/190523_162823_.png");
+          @media (max-width: $maxPhoneWidth) {
+            background-image: url("https://dz02g1kgtiysz.cloudfront.net/deals/files/190527_174738_pingmo.png");
+            height: $selSize * 9;
+          }
+        }
+        .submitBox {
+          padding-top: 28.5%;
+          margin: 0 auto;
+          width: 50%;
+          @media (max-width: 1000px) {
+            padding-top: 33.3%;
+          }
+          form {
+            width: 100%;
+            margin: 0 auto;
+            margin-bottom: 15px;
+            @media (max-width: $maxPhoneWidth) {
+              margin-bottom: 10px;
+            }
+            .grap {
+              display: block;
+              width: 10px;
+            }
+            .input {
+              input {
+                background-color: #fff;
+                width: 100%;
+                font-size: 13px;
+                @media (max-width: $maxPhoneWidth) {
+                  font-size: 12px;
+                  height: 30px;
+                  line-height: 30px;
+                }
+              }
+            }
+
+            .button {
+              margin-top: 10px;
+              button {
+                width: 100%;
+                @media (max-width: $maxPhoneWidth) {
+                  font-size: 13px;
+                  height: 30px;
+                  line-height: 30px;
+                }
+              }
+            }
+            section {
+              display: flex;
+              @media (max-width: $maxPhoneWidth) {
+                display: block;
+              }
+              .flex {
+                flex: 12;
+                margin-top: 20px;
+                @media (max-width: $maxPhoneWidth) {
+                  margin-top: 10px;
+                }
+                &.captchaFlex {
+                  flex: 12;
+                }
+                @media (max-width: $maxPhoneWidth) {
+                  display: block;
+                }
+              }
+            }
+          }
+
+          @media (max-width: $maxPhoneWidth) {
+            width: 80%;
+            padding-top: 190px;
+            h1 {
+              font-size: 12px;
+              margin-bottom: 10px;
+            }
+            p {
+              font-size: 12px;
+            }
+          }
+          h1 {
+            font-weight: normal;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            text-align: center;
+          }
+          p {
+            font-size: 1rem;
+          }
+        }
+        .share {
+          display: flex;
+          margin-top: 15px;
+          color: $colorgray;
+          @media (max-width: $maxPhoneWidth) {
+            margin-top: 5px;
+          }
+          .unline {
+            flex: 1;
+            border-bottom: 1px solid $colorgray;
+            position: relative;
+            top: -8px;
+          }
+          p {
+            width: 270px;
+            text-align: center;
+          }
+        }
+        .shareBox {
+          display: flex;
+          width: 105px;
+          margin: 0 auto;
+          margin-top: 8px;
+          a {
+            display: block;
+            width: 50px;
+            margin-top: 5px;
+            padding: 0 10px;
+            cursor: pointer;
+          }
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  $marg: 5rem;
+  &.screen2x {
+    padding: $marg 20px;
+    padding-bottom: 6rem;
+    @media (max-width: $maxPhoneWidth) {
+      padding: 3rem 20px;
+    }
+    h2 {
+      font-weight: normal;
+      @media (max-width: $maxPhoneWidth) {
+        font-size: 16px;
+      }
+    }
+    .subtitle {
+      margin-top: $marg;
+      @media (max-width: $maxPhoneWidth) {
+        margin-top: 3rem;
+      }
+    }
+    .flexbox {
+      display: flex;
+      width: 800px;
+      margin: 0 auto;
+      padding-top: 20px;
+      @media (max-width: $maxPhoneWidth) {
+        width: 300px;
+      }
+      .glance {
+        min-height: 100px;
+        background: #fff;
+        flex: 1;
+        margin: 0 2rem;
+        @media (max-width: $maxPhoneWidth) {
+          margin: 0 5px;
+        }
+        img {
+          display: block;
+          width: 80%;
+          max-width: 100px;
+          margin: 5px auto;
+        }
+        h3 {
+          color: $color;
+          text-align: center;
+          margin: 0;
+          font-size: 20px;
+          @media (max-width: $maxPhoneWidth) {
+            font-size: 12px;
+          }
+        }
+        p {
+          text-align: center;
+          padding: 0 20px;
+          color: $colorgray;
+          font-size: 15px;
+          @media (max-width: $maxPhoneWidth) {
+            font-size: 12px;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+  &.screen3x {
+    padding: $marg 20px;
+    padding-bottom: 7rem;
+    background-image: url("https://dz02g1kgtiysz.cloudfront.net/deals/files/190524_162458_-53.png");
+    background-size: cover;
+    background-position: center;
+    @media (max-width: $maxPhoneWidth) {
+      padding: 3rem 20px;
+      :global(.wrap) {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0;
+      }
+    }
+    h3 {
+      margin: 0;
+      text-align: center;
+    }
+    p {
+      margin: 0;
+      text-align: center;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+    .subtitle {
+      color: #fff;
+      margin-bottom: $marg;
+      @media (max-width: $maxPhoneWidth) {
+        margin-bottom: 3rem;
+      }
+    }
+    .rowBox {
+      overflow-x: auto;
+    }
+    .flexbox {
+      min-width: 765px;
+      @media (max-width: $maxPhoneWidth) {
+        min-width: 590px;
+      }
+      div {
+        box-sizing: border-box;
+        min-height: 50px;
+        background-clip: padding-box;
+        border: 5px solid rgba(255, 255, 255, 0);
+      }
+      .col1 {
+        flex: 1.5;
+        color: #fff;
+        p {
+          font-size: 16px;
+          font-weight: 600;
+          padding: 0 20px;
+          @media (max-width: $maxPhoneWidth) {
+            font-size: 12px;
+            padding: 0 5px;
+          }
+          span {
+            display: block;
+            margin-bottom: 5px;
+          }
+        }
+      }
+      .col2 {
+        flex: 3.5;
+        @media (max-width: $maxPhoneWidth) {
+          flex: 2.8;
+        }
+      }
+      .col3 {
+        flex: 2;
+      }
+      .col4 {
+        flex: 2;
+      }
+    }
+    .row1 {
+      div {
+        padding: 15px 0;
+        background-color: rgba(255, 255, 255, 0.9);
+      }
+      img {
+        width: 80px;
+        @media (max-width: $maxPhoneWidth) {
+          width: 50px;
+        }
+      }
+      h3 {
+        color: $color;
+        font-size: 18px;
+        @media (max-width: $maxPhoneWidth) {
+          font-size: 14px;
+        }
+      }
+      p {
+        color: $colorgray;
+      }
+    }
+    .row2 {
+      div {
+        padding-top: 50px;
+        padding-bottom: 30px;
+        background-color: #fff;
+        @media (max-width: $maxPhoneWidth) {
+          padding-top: 30px;
+          padding-bottom: 15px;
+        }
+      }
+      .col1 {
+        background-color: $bcolor;
+        padding-top: 70px;
+        @media (max-width: $maxPhoneWidth) {
+          padding-top: 38px;
+        }
+      }
+      .col2 {
+        color: $color;
+      }
+      img {
+        height: 80px;
+        @media (max-width: $maxPhoneWidth) {
+          height: 50px;
+        }
+      }
+      h3 {
+        font-size: 36px;
+        margin-top: 10px;
+        @media (max-width: $maxPhoneWidth) {
+          font-size: 20px;
+        }
+      }
+      p {
+        font-size: 16px;
+        font-weight: 600;
+        @media (max-width: $maxPhoneWidth) {
+          font-size: 12px;
+        }
+      }
+    }
+    .row3 {
+      div {
+        padding: 20px 0;
+        background-color: #fff;
+        @media (max-width: $maxPhoneWidth) {
+          padding: 15px 0;
+        }
+      }
+      h3 {
+        font-size: 16px;
+        margin: 0 20px;
+        @media (max-width: $maxPhoneWidth) {
+          font-size: 10px;
+          margin: 0 15px;
+        }
+      }
+      .col1 {
+        background-color: $bcolor;
+        padding-top: 30px;
+      }
+      .col2 {
+        color: $color;
+      }
+    }
+  }
+  &.screen4x {
+    padding-top: $marg;
+    padding-bottom: $marg;
+    h3 {
+      text-align: center;
+    }
+    @media (max-width: $maxPhoneWidth) {
+      padding-top: 3rem;
+    }
+    .subtitle {
+      margin-bottom: $marg;
+      @media (max-width: $maxPhoneWidth) {
+        padding-bottom: 0;
+      }
+    }
+    .navbox {
+      width: 100%;
+      background-color: $bcolor;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      &:after {
+        content: " ";
+        clear: both;
+        overflow: hidden;
+        height: 0;
+      }
+      .scrollnav {
+        white-space: nowrap;
+        min-width: 100%;
+      }
+      .flexbox {
+        flex: none;
+        .col {
+          position: relative;
+          box-sizing: border-box;
+          display: inline-block;
+          text-align: center;
+          font-weight: 600;
+          line-height: 40px;
+          color: #fff;
+          height: 40px;
+          min-width: 170px;
+          padding: 0 1.5rem;
+          border-right: 1px solid #fff;
+          cursor: pointer;
+          &:last-child {
+            border: 0;
+          }
+        }
+        .circeli {
+          background-image: url("https://dz02g1kgtiysz.cloudfront.net/deals/files/190527_101806_-38.png");
+          background-size: cover;
+          background-position-y: 99%;
+        }
+      }
+    }
+    .content4x {
+      padding: $marg 0;
+      background-color: #fff;
+      // add
+      padding-top: 0;
+      @media (max-width: $maxPhoneWidth) {
+        padding: 0;
+      }
+      .circleGifBox {
+        position: relative;
+        padding: 4rem 0;
+        @media (max-width: $maxPhoneWidth) {
+          padding: 10px 0;
+        }
+        img {
+          box-sizing: border-box;
+          display: block;
+          width: 66%;
+          margin: 0 auto;
+          padding: 30px;
+          @media (max-width: $maxPhoneWidth) {
+            width: 100%;
+            padding: 10px;
+          }
+        }
+        div {
+          position: absolute;
+          top: 45%;
+          width: 50px;
+          height: 50px;
+          border-top: 2px solid $gray2;
+          border-left: 2px solid $gray2;
+          transform: translateY(-50%);
+          @media (max-width: $maxPhoneWidth) {
+            width: 30px;
+            height: 30px;
+          }
+          cursor: pointer;
+          &.circleRight {
+            right: 0;
+            transform: rotate(135deg);
+            @media (max-width: $maxPhoneWidth) {
+              right: 30px;
+              display: none;
+            }
+          }
+          &.circleleft {
+            left: 0;
+            transform: rotate(-45deg);
+            @media (max-width: $maxPhoneWidth) {
+              left: 30px;
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.screen5x {
+    padding: $marg 0;
+    padding-bottom: 8rem;
+    background-color: $bcolor;
+    @media (max-width: $maxPhoneWidth) {
+      padding: 3rem 10px;
+      :global(.wrap) {
+        padding: 0;
+      }
+    }
+    .subtitle {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      color: #fff;
+    }
+    h3 {
+      color: #fff;
+      text-align: center;
+      font-size: 16px;
+      @media (max-width: $maxPhoneWidth) {
+        font-size: 14px;
+        margin-bottom: 1.5rem;
+      }
+    }
+    p {
+      color: #fff;
+      font-size: 12px;
+      margin-bottom: $marg;
+      @media (max-width: $maxPhoneWidth) {
+        margin-bottom: 2rem;
+      }
+    }
+    // add
+    .bar {
+      border-top: 2px solid rgb(45, 67, 99);
+      border-bottom: 2px solid rgb(45, 67, 99);
+      overflow: hidden;
+      .barTitlle {
+        min-width: 25%;
+        float: left;
+        padding-left: 0;
+        border-right: 2px solid rgb(45, 67, 99);
+        p {
+          box-sizing: border-box;
+          width: 100%;
+          padding: 30px 10px;
+          margin: 0;
+          font-size: 20px;
+          line-height: 32px;
+          text-align: left;
+          word-break: keep-all;
+          white-space: nowrap;
+          @media (max-width: $maxPhoneWidth) {
+            font-size: 12px;
+            line-height: 15px;
+            padding: 15px;
+            padding-left: 0;
+          }
+        }
+      }
+      .legent {
+        width: 69%;
+        float: left;
+        @media (max-width: $maxPhoneWidth) {
+          width: 53%;
+        }
+      }
+      .barLegent {
+        padding: 30px;
+        padding-left: 0;
+        overflow: hidden;
+        @media (max-width: $maxPhoneWidth) {
+          padding: 15px;
+          padding-left: 0;
+        }
+        span {
+          width: 80%;
+          float: left;
+          background: $color;
+          height: 32px;
+          transition: width 2s;
+          @media (max-width: $maxPhoneWidth) {
+            width: 60%;
+            height: 15px;
+          }
+          &.bar45w {
+            width: 55%;
+            @media (max-width: $maxPhoneWidth) {
+              width: 40%;
+            }
+          }
+          &.bar30w {
+            width: 40%;
+            @media (max-width: $maxPhoneWidth) {
+              width: 30%;
+            }
+          }
+          &.bar24w {
+            width: 30%;
+            @media (max-width: $maxPhoneWidth) {
+              width: 20%;
+            }
+          }
+          &.bar5w {
+            width: 10%;
+          }
+          &.hide {
+            width: 0;
+            overflow: hidden;
+          }
+        }
+        b {
+          float: left;
+          color: $color;
+          font-size: 20px;
+          line-height: 32px;
+          padding-left: 20px;
+          @media (max-width: $maxPhoneWidth) {
+            font-size: 12px;
+            line-height: 15px;
+            padding-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.flexbox {
+  display: flex;
+}
+.modalMask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  transition: 600ms;
+  &.readyMask {
+    background: none;
+  }
+  &.hidetop {
+    transform: translate(0, -120%);
+  }
+  .Modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 1000px;
+    min-height: 200px;
+    @media (max-width: $maxPhoneWidth) {
+      min-width: 100%;
+      top: 0;
+      left: 50%;
+      padding: 0;
+      transform: translate(-50%, 0);
+    }
+    img {
+      max-width: 100%;
+    }
+    .content {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+    }
+  }
+}
+
+.product {
+  background: #eee;
+  padding: 3% 0 8%;
+  @media (max-width: 767px) {
+    padding-bottom: 40px;
+  }
+  .title {
+    text-align: center;
+    padding-bottom: 3%;
+    h2 {
+      font-size: 48px;
+      font-weight: 400;
+      @media (max-width: 767px) {
+        font-size: 2rem;
+      }
+    }
+  }
+  .list {
+    width: 70%;
+    margin: 0 auto;
+    .item {
+      display: inline-block;
+      width: 50%;
+      vertical-align: top;
+      position: relative;
+      font-size: 24px;
+      color: black;
+      transition: 800ms;
+      margin-bottom: 50px;
+      @media (max-width: 767px) {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .name {
+        font-size: 1.8rem;
+        line-height: 1.6rem;
+        min-height: 3.1rem;
+        color: #333;
+        @media (max-width: 1130px) {
+          font-size: 1.6rem;
+        }
+      }
+      .info {
+        font-size: 1.3rem;
+        line-height: 1.4rem;
+        min-height: 2.8rem;
+        color: #6b6b6b;
+        font-family: sans-serif;
+        @media (max-width: 1130px) {
+          font-size: 1.2rem;
+        }
+      }
+      .price {
+        color: #00a7e1;
+        font-size: 1.8rem;
+        @media (max-width: 1130px) {
+          font-size: 1.6rem;
+        }
+      }
+      .white {
+        color: white;
+      }
+      p {
+        text-align: left;
+        padding: 0 30px;
+        margin: 0.8rem 0;
+        box-sizing: border-box;
+      }
+      .thumb {
+        overflow: hidden;
+        position: relative;
+        width: 84%;
+        height: 0;
+        padding-bottom: 104%;
+        margin: 0 30px 1.2rem;
+        background-color: #fff;
+        img {
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+        }
+      }
+      a {
+        width: 84%;
+        margin: 0 30px;
+      }
+    }
+  }
+}

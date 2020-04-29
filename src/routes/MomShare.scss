@@ -1,0 +1,1144 @@
+@import "./sass/anker.scss";
+
+.momshared {
+  h1 {
+    font-family: "Booster Next FY";
+    font-size: 42px;
+    text-align: center;
+    font-weight: 800;
+    margin: 0;
+
+    @media (max-width: $maxPhoneWidth) {
+      font-size: 21px;
+    }
+  }
+
+  h2 {
+    font-family: "Booster Next FY";
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.1;
+    text-align: center;
+    margin: 0;
+
+    @media (max-width: $maxPhoneWidth) {
+      font-size: 18px;
+    }
+  }
+
+  h3 {
+    font-family: "Booster Next FY";
+    color: #ff83a3;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+
+    @media (max-width: $maxPhoneWidth) {
+      font-size: 18px;
+    }
+  }
+
+  p {
+    font-family: "Booster Next FY";
+    font-size: 14px;
+    text-align: left;
+    margin: 6px 0;
+
+    @media (max-width: $maxPhoneWidth) {
+      font-size: 10px;
+    }
+  }
+
+  ul {
+    height: 100%;
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  li {
+    font-family: "Booster Next FY";
+    list-style: none;
+    font-size: 14px;
+    list-style: decimal;
+  }
+
+  div,
+  button {
+    font-family: "Booster Next FY";
+    box-sizing: border-box;
+  }
+  a,
+  button {
+    cursor: pointer;
+  }
+  section {
+    box-sizing: border-box;
+    padding: 0 2%;
+  }
+  .section {
+    position: relative;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .caidaititle {
+    position: relative;
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    @media (max-width: $maxPhoneWidth) {
+      margin-bottom: 20px;
+    }
+    .titletxt {
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .caidai {
+      width: 100%;
+      min-height: 80px;
+      @media (max-width: $maxPhoneWidth) {
+        min-height: 60px;
+      }
+    }
+  }
+  .title {
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+    text-align: center;
+    .titletxt {
+      position: relative;
+      z-index: 2;
+      display: inline-block;
+      color: #ff83a3;
+      background-color: #fee7ef;
+      padding: 0 30px;
+    }
+    .line {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      z-index: 1;
+      transform: translate(0, -50%);
+      width: 100%;
+      border-bottom: 1px solid #ff83a3;
+    }
+  }
+
+  .btnBox {
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .btns {
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0 30px;
+    margin: 2px;
+    border: 0;
+    border-radius: 20px;
+    background: #ffa645;
+    cursor: pointer;
+
+    &.btnsBorder {
+      color: #ffa645;
+      border: 1px solid #ffa645;
+      background: transparent;
+    }
+    @media (max-width: $maxPhoneWidth) {
+      font-size: 12px;
+      height: 30px;
+      line-height: 30px;
+      padding: 0 15px;
+    }
+  }
+
+  .uplaodBtn {
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    border: 0;
+    height: 35px;
+    cursor: pointer;
+    @media (max-width: $maxPhoneWidth) {
+      font-size: 12px;
+      height: 30px;
+      line-height: 30px;
+    }
+    p {
+      box-sizing: border-box;
+      width: 100%;
+      line-height: 35px;
+      color: #fff;
+      font-size: 16px;
+      text-align: center;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      padding: 0 30px;
+      margin: 0;
+      border: 0;
+      border-radius: 20px;
+      background: #ffa645;
+      position: relative;
+      z-index: 1;
+      @media (max-width: $maxPhoneWidth) {
+        font-size: 12px;
+        height: 30px;
+        line-height: 30px;
+      }
+    }
+    .file_upload {
+      opacity: 0;
+      box-sizing: border-box;
+      width: 100%;
+      height: 35px;
+      margin: 0;
+      border: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      cursor: pointer;
+      @media (max-width: $maxPhoneWidth) {
+        font-size: 12px;
+        height: 30px;
+        line-height: 30px;
+      }
+    }
+  }
+
+  .banner {
+    display: block;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      display: block;
+      .img {
+        @media (max-width: $maxPhoneWidth) {
+          width: 180%;
+          transform: translate(-22%);
+        }
+      }
+    }
+  }
+
+  .prizeSec {
+    padding: 4rem 0;
+    background-color: #fee7ef;
+    @media (max-width: $maxPhoneWidth) {
+      padding: 2rem 0;
+    }
+    .caidaititle {
+      width: 500px;
+    }
+    .giftMobile {
+      display: none;
+      @media (max-width: $maxPhoneWidth) {
+        display: block;
+        width: 85%;
+        margin: 0 auto;
+        margin-top: 15px;
+      }
+    }
+    .giftBox {
+      display: flex;
+      @media (max-width: $maxPhoneWidth) {
+        display: block;
+        margin: 10px;
+        padding: 10px 0;
+        border-radius: 10px;
+        background-color: #fff;
+        overflow: hidden;
+      }
+    }
+    .gift {
+      width: 25%;
+      padding: 0 10px;
+      @media (max-width: $maxPhoneWidth) {
+        width: 100%;
+        padding: 0;
+        &:last-child {
+          .content {
+            border: none;
+          }
+        }
+      }
+    }
+    .paddingBox {
+      padding: 20px 0;
+      border-radius: 10px;
+      background-color: #fff;
+      @media (max-width: $maxPhoneWidth) {
+        padding: 15px;
+        padding-bottom: 0;
+        border-radius: 0;
+      }
+    }
+    .img {
+      padding-left: 5%;
+      @media (max-width: $maxPhoneWidth) {
+        display: none;
+      }
+      img {
+        display: block;
+        height: 120px;
+        margin: 0 auto;
+        @media (max-width: $maxPadWidth) {
+          height: 90px;
+        }
+      }
+    }
+    .content {
+      padding: 20px 15px 0 15px;
+      padding-top: 20px;
+      @media (max-width: $maxPhoneWidth) {
+        padding: 0 0 15px 0;
+        border-bottom: 1px solid #ffcdd9;
+      }
+      h3 {
+        padding-bottom: 10px;
+      }
+      li {
+        color: #474747;
+        padding-top: 8px;
+      }
+    }
+  }
+
+  .stepSec {
+    padding-top: 4rem;
+    background-color: #fee7ef;
+    position: relative;
+    @media (max-width: $maxPhoneWidth) {
+      padding: 1rem 0;
+    }
+  }
+
+  .stepLine {
+    padding: 2rem 0;
+    background: linear-gradient(
+      #fee7ef 0%,
+      #fee7ef 50%,
+      #fff6f7 50%,
+      #fff6f7 100%
+    );
+    @media (max-width: $maxPhoneWidth) {
+      padding: 0;
+    }
+    .stepBox {
+      position: relative;
+    }
+    .stepBack {
+      display: block;
+      width: 90%;
+      margin: 0 auto;
+      @media (max-width: $maxPhoneWidth) {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    .stepAll {
+      position: absolute;
+      width: 90%;
+      left: 5%;
+      top: 0;
+      z-index: 1;
+      display: flex;
+      @media (max-width: $maxPhoneWidth) {
+        display: block;
+        position: relative;
+        left: 0;
+        margin: 0 auto;
+      }
+    }
+    .step {
+      position: relative;
+      padding: 2rem;
+      padding-top: 42px;
+      @media (max-width: $maxPadWidth) {
+        padding-top: 20px;
+      }
+      @media (max-width: $maxPhoneWidth) {
+        display: block;
+        position: static;
+        padding: 1rem;
+        padding-top: 15px;
+      }
+    }
+    .stepTop {
+      text-align: center;
+      p {
+        display: inline-block;
+        color: #ff83a3;
+        font-size: 24px;
+        @media (max-width: $maxPadWidth) {
+          font-size: 16px;
+        }
+        @media (max-width: $maxPhoneWidth) {
+          font-size: 14px;
+        }
+      }
+      img {
+        width: 30px;
+        margin-bottom: -5px;
+        margin-left: 10px;
+        display: inline-block;
+        @media (max-width: $maxPadWidth) {
+          width: 20px;
+        }
+      }
+    }
+    .stepContent {
+      font-size: 14px;
+      color: #484848;
+      padding-top: 15px;
+      text-align: center;
+      @media (max-width: $maxPadWidth) {
+        padding-top: 5px;
+      }
+    }
+  }
+
+  .sharedSec {
+    padding: 4rem 0;
+    background-color: #fff6f7;
+    @media (max-width: $maxPhoneWidth) {
+      padding-bottom: 2rem;
+    }
+    .showForm {
+      text-align: right;
+      @media (max-width: $maxPhoneWidth) {
+        text-align: center;
+      }
+    }
+    .caidaititle {
+      width: 550px;
+      margin-bottom: 20px;
+    }
+    .section {
+      overflow: visible;
+    }
+    .screen {
+      border-bottom: 1px solid #fecedc;
+      margin-bottom: 30px;
+      @media (max-width: $maxPhoneWidth) {
+        border-bottom: none;
+      }
+      .left {
+        float: left;
+        padding: 12px 0;
+        @media (max-width: $maxPhoneWidth) {
+          width: 100%;
+          text-align: center;
+          border-bottom: 1px solid #fecedc;
+        }
+      }
+      .right {
+        float: right;
+        padding: 10px 0;
+        @media (max-width: $maxPhoneWidth) {
+          width: 100%;
+          text-align: center;
+        }
+      }
+      .line {
+        display: inline-block;
+        width: 1px;
+        height: 18px;
+        margin: 0 10px;
+        vertical-align: text-bottom;
+        background-color: #fecedc;
+      }
+      .btn {
+        color: #4a4849;
+        font-size: 18px;
+        padding: 0 10px;
+        cursor: pointer;
+      }
+      .current {
+        color: #ff83a3;
+      }
+      select {
+        height: 26px;
+        display: inline-block;
+        color: #4a4849;
+        font-size: 14px;
+        box-sizing: border-box;
+        padding-left: 15px;
+        border: 0;
+        background: transparent;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+      }
+      &::after {
+        content: "";
+        display: block;
+        clear: both;
+        height: 0;
+      }
+    }
+  }
+
+  .masonry {
+    padding-bottom: 20px;
+    .water {
+      box-sizing: border-box;
+      width: 25%;
+      padding: 8px;
+      border-radius: 15px;
+      @media (max-width: $maxPadWidth) {
+        width: 33.3%;
+      }
+      @media (max-width: $maxPhoneWidth) {
+        width: 50%;
+      }
+    }
+  }
+
+  .showimg {
+    position: relative;
+    border-radius: 10px 10px 0 0;
+    img {
+      width: 100%;
+      max-height: 500px;
+    }
+    .showBtn {
+      position: absolute;
+      bottom: 15px;
+      right: 5px;
+      button {
+        border: none;
+        outline: none;
+        background: transparent;
+        padding: 0;
+        margin: 0 10px;
+        vertical-align: top;
+      }
+      img {
+        width: 25px;
+      }
+      span {
+        display: inline-block;
+        height: 25px;
+        line-height: 25px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        @media (max-width: $maxPhoneWidth) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .showContent {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+    @media (max-width: $maxPhoneWidth) {
+      padding: 8px;
+    }
+    .showContenttop {
+      overflow: hidden;
+      padding-bottom: 15px;
+    }
+    .product {
+      width: auto;
+      height: 75px;
+      float: left;
+      @media (max-width: $maxPhoneWidth) {
+        height: 60px;
+      }
+    }
+    .btns {
+      float: right;
+      margin: 20px 2px;
+      @media (max-width: $maxPhoneWidth) {
+        margin: 15px 0;
+      }
+      &:hover {
+        color: #fff;
+        border: none;
+        background: #ffa645;
+      }
+    }
+    h3 {
+      color: #474747;
+      font-size: 18px;
+      text-align: left;
+      @media (max-width: $maxPhoneWidth) {
+        font-size: 16px;
+      }
+    }
+    .line {
+      display: block;
+      width: 100%;
+      height: 0;
+      margin: 15px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .showName {
+      img {
+        height: 50px;
+        vertical-align: top;
+        @media (max-width: $maxPhoneWidth) {
+          height: 40px;
+        }
+      }
+      span {
+        display: inline-block;
+        height: 50px;
+        line-height: 50px;
+        color: #474747;
+        font-size: 16px;
+        font-weight: 600;
+        margin-left: 20px;
+        @media (max-width: $maxPhoneWidth) {
+          height: 40px;
+          line-height: 40px;
+          font-size: 14px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  .rulesSec {
+    padding-bottom: 4rem;
+    background-color: #fff6f7;
+    @media (max-width: $maxPhoneWidth) {
+      padding-bottom: 2rem;
+    }
+    .titletxt {
+      background-color: #fff6f7;
+    }
+    ul {
+      width: 80%;
+      margin: 0 auto;
+      padding-top: 30px;
+      @media (max-width: $maxPhoneWidth) {
+        padding-top: 10px;
+      }
+    }
+    li {
+      color: #474747;
+      font-size: 16px;
+      padding-bottom: 10px;
+      @media (max-width: $maxPhoneWidth) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .productSec {
+    padding: 4rem 0;
+    background-color: #fee7ef;
+    .caidaititle {
+      width: 650px;
+      @media (max-width: $maxPhoneWidth) {
+        .caidai {
+          min-height: 70px;
+        }
+      }
+    }
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .flexbox {
+      width: 25%;
+      border-radius: 10px;
+      padding: 10px;
+      overflow: hidden;
+      @media (max-width: $maxPhoneWidth) {
+        width: 50%;
+        padding: 6px;
+      }
+    }
+    .img {
+      width: 100%;
+      padding: 20px;
+      background: #fff;
+      @media (max-width: $maxPhoneWidth) {
+        padding: 10px;
+      }
+      img {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+      }
+    }
+    .content {
+      padding: 20px;
+      background-color: #fff6f9;
+      @media (max-width: $maxPhoneWidth) {
+        padding: 15px;
+      }
+      h3 {
+        color: #474747;
+        text-align: left;
+        margin-bottom: 10px;
+      }
+      .desc {
+        color: #949494;
+        text-align: left;
+        margin-bottom: 10px;
+      }
+      .price {
+        color: #474747;
+        text-align: left;
+      }
+      .btnBox {
+        text-align: left;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .main {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 0.5rem;
+    width: 96%;
+    max-width: 1000px;
+    padding: 2.5rem;
+    z-index: 200;
+    @media only screen and (max-width: $maxPhoneWidth) {
+      width: 90%;
+      padding: 2.5rem 1rem 1rem 1rem;
+      .content {
+        max-height: 500px;
+        overflow: auto;
+      }
+    }
+  }
+
+  .mask {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 180;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .loginBox {
+    color: #fff;
+    width: 100%;
+    padding: 4rem 6rem;
+    @media (max-width: $maxPhoneWidth) {
+      padding: 2rem;
+    }
+
+    .loginTip {
+      color: #474747;
+      font-size: 18px;
+      font-weight: 600;
+      text-align: center;
+      padding-bottom: 20px;
+      @media (max-width: $maxPhoneWidth) {
+        font-size: 14px;
+      }
+    }
+
+    $heightbtn: 45px;
+
+    button {
+      width: 100%;
+      height: $heightbtn;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .google {
+      width: 100%;
+      height: $heightbtn;
+      margin-bottom: 20px;
+      background-color: #3c6cd9;
+    }
+
+    .facebook {
+      width: 100%;
+      height: $heightbtn;
+      background-color: #3c6cd9;
+    }
+  }
+
+  .formBox {
+    display: flex;
+    @media (max-width: $maxPhoneWidth) {
+      display: block;
+    }
+    .uplaodBox {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      @media (max-width: $maxPhoneWidth) {
+        padding: 3rem 0;
+        top: 0;
+        transform: none;
+      }
+      .btns,
+      .uplaodBtn {
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 30px;
+      }
+      .btnsBorder {
+        margin-bottom: 0;
+      }
+    }
+    .left {
+      width: 50%;
+      position: relative;
+      background-color: #eee;
+      @media (max-width: $maxPhoneWidth) {
+        width: 100%;
+      }
+      .input {
+        width: 90%;
+      }
+    }
+    .preview {
+      @media (max-width: $maxPhoneWidth) {
+        max-height: 300px;
+      }
+      img {
+        display: block;
+        width: 100%;
+        @media (max-width: $maxPhoneWidth) {
+          width: auto;
+          height: 100%;
+          max-height: 300px;
+          margin: 0 auto;
+        }
+      }
+      button {
+        box-sizing: border-box;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        font-size: 18px;
+        border: 1px solid #999;
+        background: rgba($color: #ccc, $alpha: 0.3);
+        cursor: pointer;
+        transition: all 0.3s;
+        @media (max-width: $maxPhoneWidth) {
+          height: 30px;
+        }
+        &:hover {
+          background: rgba($color: #ccc, $alpha: 0.7);
+        }
+      }
+    }
+    .videoform {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      @media (max-width: $maxPhoneWidth) {
+        padding: 3rem 0;
+        position: static;
+        transform: none;
+      }
+      .btnsBorder {
+        margin-right: 15px;
+      }
+    }
+    .right {
+      width: 50%;
+      padding-left: 50px;
+      @media (max-width: $maxPhoneWidth) {
+        width: 100%;
+        padding-left: 0;
+        padding-top: 15px;
+      }
+      input {
+        text-align: left;
+      }
+      textarea {
+        text-align: left;
+        height: 120px;
+      }
+      .btnBox {
+        text-align: left;
+        @media (max-width: $maxPhoneWidth) {
+          text-align: center;
+        }
+      }
+      .btns {
+        width: 150px;
+        padding: 0;
+        margin-right: 15px;
+        @media (max-width: $maxPhoneWidth) {
+          width: 120px;
+        }
+      }
+      .tip {
+        font-size: 14px;
+        color: #979797;
+      }
+    }
+    .portrait {
+      overflow: hidden;
+      margin-bottom: 20px;
+      img {
+        float: left;
+        height: 60px;
+      }
+      .btnBox {
+        float: left;
+        padding: 15px 0;
+        margin-left: 30px;
+      }
+      .btns {
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+    .optImg {
+      height: 50px;
+    }
+    .optTitle {
+      margin-left: 10px;
+    }
+    .titleTop {
+      font-size: 12px;
+      color: #474747;
+    }
+    .titleDec {
+      font-size: 12px;
+      color: #949494;
+    }
+    .flex {
+      display: flex;
+    }
+  }
+
+  .detailBox {
+    display: flex;
+    padding: 20px 30px;
+    @media (max-width: $maxPhoneWidth) {
+      display: block;
+      padding: 20px 15px;
+    }
+    .left {
+      width: 45%;
+      @media (max-width: $maxPhoneWidth) {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+      img {
+        display: block;
+        width: 100%;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        @media (max-width: $maxPhoneWidth) {
+          top: 0;
+          transform: none;
+        }
+      }
+    }
+    .right {
+      padding-left: 50px;
+      @media (max-width: $maxPhoneWidth) {
+        width: 100%;
+        padding-left: 0;
+      }
+    }
+    .line {
+      display: block;
+      width: 100%;
+      height: 0;
+      margin: 20px 0;
+      border-bottom: 1px solid #ffd0db;
+      @media (max-width: $maxPhoneWidth) {
+        margin: 10px 0;
+      }
+    }
+    .portrait {
+      overflow: hidden;
+    }
+    .portraitImg {
+      float: left;
+      height: 40px;
+    }
+    .name {
+      float: left;
+      line-height: 40px;
+      font-weight: 600;
+      margin: 0;
+      padding: 0 0 0 20px;
+    }
+    .xin {
+      float: right;
+      height: 40px;
+      padding: 5px 0;
+      img {
+        height: 30px;
+      }
+    }
+    .titl {
+      font-size: 16px;
+      font-weight: 600;
+      @media (max-width: $maxPhoneWidth) {
+        font-size: 14px;
+      }
+    }
+    .desc {
+      color: #979797;
+      font-size: 14px;
+      @media (max-width: $maxPhoneWidth) {
+        font-size: 12px;
+      }
+    }
+    .flex {
+      display: flex;
+      padding-top: 1rem;
+    }
+    .fleft {
+      img {
+        width: 100px;
+      }
+    }
+    .ptitl {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .pdesc {
+      font-size: 14px;
+      font-weight: 400;
+      margin: 15px 0;
+    }
+    .prize {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .btnBox {
+      text-align: left;
+      padding-bottom: 0;
+      overflow: hidden;
+      button {
+        height: 30px;
+        line-height: 30px;
+        vertical-align: bottom;
+      }
+    }
+    .facebook {
+      height: 30px;
+      margin-left: 18px;
+      vertical-align: bottom;
+    }
+  }
+
+  .select {
+    position: relative;
+    border: 1px solid #ffd0db;
+    border-radius: 6px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    box-shadow: none;
+    background: #fff;
+    input {
+      border: 0;
+    }
+  }
+  .input {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    box-shadow: none;
+    input,
+    textarea,
+    select {
+      font-family: "Booster Next FY";
+      box-sizing: border-box;
+      width: 100%;
+      height: 35px;
+      line-height: 35px;
+      color: #474747;
+      font-size: 14px;
+      text-align: center;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin: 0;
+      padding: 0 15px;
+      border-radius: 6px;
+      border: 1px solid #ffd0db;
+      box-shadow: none;
+      background: #fff;
+      &:focus {
+        outline: none;
+        border: 1px solid #2684ff;
+      }
+    }
+  }
+  :global {
+    .modalClose {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 2.5rem;
+      height: 2.5rem;
+      color: $gray;
+      text-align: center;
+      padding: 5px;
+      border: none;
+      background: transparent;
+      transition: 400ms;
+      z-index: 1;
+      cursor: pointer;
+      i {
+        pointer-events: none;
+        font-size: $subTitleSize;
+        color: #333;
+        // &:after,
+        // &:before { content: ""; width: 15px; height: 0; border-bottom: 2px solid $gray;
+        //   position: absolute; top: 50%; left: 50%; margin: 0 0 0 -10px;
+        // }
+        // &:before { transform: rotate(45deg); }
+        // &:after { transform: rotate(-45deg); }
+      }
+      &:hover {
+        text-shadow: 1px 1px 3px $grayTxtlight1;
+        i {
+          &:after,
+          &:before {
+            box-shadow: 0px 1px 3px $grayTxtlight1;
+          }
+        }
+      }
+    }
+  }
+}

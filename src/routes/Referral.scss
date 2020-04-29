@@ -1,0 +1,337 @@
+@import "./sass/anker.scss";
+
+.Cable {
+  h1 {
+    font-size: 42px;
+    text-align: center;
+    font-weight: 800;
+    margin: 0;
+    @media (max-width: $maxPhoneWidth) {
+      font-size: 21px;
+    }
+  }
+  h2 {
+    font-size: 26px;
+    line-height: 1.1;
+    text-align: center;
+    margin: 0;
+    @media (max-width: $maxPhoneWidth) {
+      font-size: 18px;
+    }
+  }
+  h3 {
+    font-size: 24px;
+    font-weight: normal;
+    text-align: left;
+    margin: 0;
+    @media (max-width: $maxPhoneWidth) {
+      font-size: 18px;
+    }
+  }
+  p {
+    font-size: 14px;
+    text-align: left;
+    margin: 6px 0;
+    @media (max-width: $maxPhoneWidth) {
+      font-size: 10px;
+    }
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  .section {
+    position: relative;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      display: block;
+      @media (max-width: $maxPhoneWidth) {
+        &.img {
+          width: 200%;
+          margin-left: -50%;
+        }
+      }
+    }
+    .section {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      padding: 1.5rem;
+      transform: translateX(-50%);
+      @media (max-width: $maxPhoneWidth) {
+        position: static;
+        transform: none;
+        .reline {
+          margin: 0 auto;
+        }
+      }
+    }
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+      @media (max-width: $maxPhoneWidth) {
+        position: static;
+        transform: none;
+      }
+    }
+    .achievements {
+      display: inline-block;
+      text-align: center;
+      padding: 15px 50px 30px 50px;
+      margin-top: 15px;
+      background-color: rgba(255, 255, 255, 0.9);
+      @media (max-width: $maxPhoneWidth) {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      p {
+        color: #333;
+      }
+      b {
+        color: $color;
+        margin-left: 5px;
+      }
+    }
+    h1 {
+      color: #fff;
+      font-weight: 800;
+      @media (max-width: $maxPhoneWidth) {
+        color: #333;
+      }
+    }
+    h3 {
+      margin: 15px 0;
+      text-align: center;
+      font-weight: 800;
+      @media (max-width: $maxPhoneWidth) {
+        margin: 10px 0;
+      }
+    }
+    p {
+      color: #fff;
+      font-size: 16px;
+      text-align: center;
+      @media (max-width: $maxPhoneWidth) {
+        color: #333;
+      }
+    }
+  }
+  .section1 {
+    padding: 8rem 0 6rem 0;
+    @media (max-width: $maxPhoneWidth) {
+      padding: 4rem 0 3rem 0;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 15px;
+      @media (max-width: $maxPhoneWidth) {
+        font-size: 24px;
+        margin-bottom: 3rem;
+      }
+    }
+    .subTitle {
+      font-size: 16px;
+      text-align: center;
+      margin: 15px 0;
+    }
+    .product {
+      display: flex;
+      margin: 0;
+      flex-wrap: wrap;
+      li {
+        width: 50%;
+        list-style: none;
+        margin: 0 auto;
+      }
+    }
+    .contentli {
+      margin: 20px 10px;
+      color: #333;
+    }
+    .imgbox {
+      overflow: hidden;
+      position: relative;
+      span {
+        position: absolute;
+        z-index: 1;
+        transform: rotate(-45deg);
+        top: 30px;
+        left: -55px;
+        background: #ffb600;
+        font-size: 20px;
+        padding: 3px;
+        width: 200px;
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+        transition: 400ms;
+      }
+    }
+    h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 10px 0 5px;
+    }
+    .rules {
+      font-size: 12px;
+      margin: 5px 0;
+      position: relative;
+      .rulesBox {
+        display: inline-block;
+        &:hover {
+          .dialog {
+            max-height: 400px;
+            padding: 10px;
+            box-shadow: 0 0 5px #ddd;
+            overflow: auto;
+          }
+        }
+        i {
+          font-size: 13px;
+        }
+      }
+      a {
+        color: #919191;
+      }
+    }
+    .dialog {
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      background: white;
+      white-space: pre-line;
+      word-break: break-word;
+      margin: 0;
+      max-height: 0;
+      transition: 200ms;
+      padding: 0 10px;
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+    .copyBox {
+      position: relative;
+      overflow: hidden;
+      align-items: stretch;
+      border: 1px solid #e2e2e2;
+      border-radius: 20px;
+      height: 40px;
+    }
+    .txt {
+      box-sizing: border-box;
+      padding: 0 10px;
+      margin: 0;
+      align-items: center;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 100%;
+      line-height: 40px;
+      overflow: hidden;
+    }
+    .iconBox {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 45%;
+      display: flex;
+      min-width: 200px;
+    }
+    .copyIcon {
+      flex: 1;
+      color: #fff;
+      width: 100%;
+      height: 40px;
+      font-size: 13px;
+      text-align: center;
+      line-height: 40px;
+      align-items: center;
+      white-space: nowrap;
+      margin: 0;
+      cursor: pointer;
+      a {
+        color: #fff;
+      }
+      &:nth-child(2n-1) {
+        background: #00a7e1;
+      }
+      &:nth-child(2n) {
+        background: #4267b2;
+      }
+      &:first-child {
+        flex: 2;
+        border-radius: 20px 0 0 20px;
+      }
+      &:last-child {
+        border-radius: 0 20px 20px 0;
+      }
+      &.copied {
+        background: #919191;
+      }
+    }
+  }
+  .section2 {
+    padding: 8rem 0 6rem 0;
+    background: #f5f5f5;
+    @media (max-width: $maxPhoneWidth) {
+      padding: 4rem 1.5rem 3rem 1.5rem;
+    }
+    .section {
+      padding: 0 1.5rem;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 6rem;
+      @media (max-width: $maxPhoneWidth) {
+        font-size: 24px;
+        margin-bottom: 3rem;
+      }
+    }
+    h5 {
+      font-size: 16px;
+      margin: 15px 0;
+    }
+    .container {
+      border-top: 1px solid #333;
+    }
+    .terms {
+      margin: 0;
+      border-bottom: 1px solid #333;
+      padding: 20px 0;
+      dt {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        cursor: pointer;
+      }
+      dd {
+        margin: 0 10px;
+        max-height: 0;
+        overflow: hidden;
+        transition: 200ms;
+      }
+      .show {
+        max-height: 400px;
+        overflow: auto;
+      }
+    }
+  }
+}

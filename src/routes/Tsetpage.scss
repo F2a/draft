@@ -1,0 +1,143 @@
+@import "./sass/anker.scss";
+
+.section4 {
+  width: 100%;
+  overflow: hidden;
+  padding: 8rem 0;
+  background-color: #000;
+  .section4H1 {
+    color: #fff;
+    text-align: center;
+    padding-bottom: 6rem;
+  }
+  .swiper {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .item {
+    box-sizing: border-box;
+    overflow: hidden;
+    background: #fff;
+    border: 10px solid #000;
+  }
+  .imgbox {
+    width: 100%;
+    height: 0;
+    padding-bottom: 115%;
+    background-image: url(https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/49187/image/large/Michael_Barker.jpg?1546055053);
+    background-position: center;
+    background-size: cover;
+  }
+  .userBox {
+    padding: 15px;
+    overflow: hidden;
+    background: #eee;
+    $headerSize: 45px;
+    img {
+      display: inline-block;
+      height: $headerSize;
+      vertical-align: middle;
+    }
+    p {
+      display: inline-block;
+      height: $headerSize;
+      line-height: $headerSize;
+      font-size: 14px;
+      font-weight: 600;
+      margin: 0;
+      padding: 0 0 0 8px;
+    }
+  }
+  .txtBox {
+    height: 0;
+    padding: 0 15px;
+    padding-bottom: 115%;
+    overflow: hidden;
+    position: relative;
+    .txtFixed {
+      width: 100%;
+      padding: 15px 0;
+    }
+    h3 {
+      font-size: 18px;
+      margin: 0;
+    }
+    img {
+      width: 50%;
+      min-width: 100px;
+      max-width: 160px;
+      margin: 6px 0 20px 0;
+    }
+    p {
+      margin: 0;
+      font-size: 15px;
+    }
+  }
+  :global {
+    .slick-arrow {
+      font-size: 0;
+      line-height: 0;
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all 500ms;
+      width: 35px;
+      height: 60px;
+      border-radius: 3px;
+      background-color: rgba($color: #848a8f, $alpha: .4);
+      cursor: pointer;
+      border: none;
+      outline: none;
+      &:hover {
+        background-color: rgba($color: #848a8f, $alpha: .8);
+      }
+      &.slick-disabled {
+        &:hover {
+          cursor: not-allowed;
+        }
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 8px;
+        height: 8px;
+        border-top: 2px solid;
+        border-right: 2px solid;
+        border-color: #fff;
+      }
+      // &:hover{ background: $color; }
+    }
+    .slick-prev {
+      left: 12.5%;
+      &:after {
+        transform: translate(-30%, -50%) rotate(225deg);
+      }
+    }
+    .slick-next {
+      right: 12.5%;
+      &:after {
+        transform: translate(-70%, -50%) rotate(45deg);
+      }
+    }
+    .slick-list {
+      width: 112%;
+      margin-left: -6%;
+    }
+  }
+}
+.normal {
+  table {
+    width: 100%;
+  }
+}
+.pixi {
+  margin: 0 auto;
+  canvas{
+    margin: 0 auto;
+    display: block;
+  }
+}

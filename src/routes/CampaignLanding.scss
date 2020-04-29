@@ -1,0 +1,713 @@
+@import "./sass/anker.scss";
+
+.CampaignLanding {
+  h1 {
+    font-size: 42px;
+    text-align: center;
+    font-weight: 800;
+    margin: 0;
+    @media (max-width: $maxPhoneWidth) {
+      font-size: 21px;
+    }
+  }
+  h2 {
+    font-size: 30px;
+    line-height: 1.1;
+    text-align: center;
+    margin: 0;
+    @media (max-width: $maxPhoneWidth) {
+      font-size: 18px;
+    }
+  }
+  h3 {
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    margin: 0;
+    @media (max-width: $maxPhoneWidth) {
+      font-size: 18px;
+    }
+  }
+  p {
+    font-size: 14px;
+    text-align: left;
+    margin: 6px 0;
+    @media (max-width: $maxPhoneWidth) {
+      font-size: 10px;
+    }
+  }
+  ul {
+    all: unset;
+  }
+  li {
+    all: unset;
+  }
+  .section {
+    position: relative;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  .section1 {
+    color: #fff;
+    background: #061532;
+    padding: 2rem 0;
+    @media (max-width: $maxPhoneWidth) {
+      padding: 1rem 10px;
+    }
+    ul {
+      display: flex;
+    }
+    li {
+      position: relative;
+    }
+    .section {
+      max-width: 1100px;
+      @media (max-width: $maxPhoneWidth) {
+        max-width: 305px;
+      }
+    }
+    .countdown {
+      overflow: hidden;
+      word-break: keep-all;
+      white-space: nowrap;
+      text-align: center;
+      width: 300px;
+      @media (max-width: $maxPhoneWidth) {
+        width: 140px;
+      }
+      div {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        font-size: 56px;
+        font-weight: 600;
+        color: #fff;
+        text-align: center;
+        margin-right: 15px;
+        border: 3px solid #161e22;
+        background-color: #101a22;
+        box-shadow: 0 3px 15px 3px rgba(0, 0, 0, 0.5);
+        &:last-child {
+          margin-right: 0;
+        }
+        @media (max-width: $maxPhoneWidth) {
+          width: 35px;
+          height: 35px;
+          line-height: 35px;
+          font-size: 26px;
+          margin-right: 5px;
+        }
+      }
+      .line {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 2px;
+        background: rgba($color: #000, $alpha: 0.7);
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.45);
+      }
+    }
+    .tipInfo {
+      margin-left: 50px;
+      flex: 1;
+      @media (max-width: $maxPhoneWidth) {
+        margin-left: 20px;
+      }
+    }
+    .info {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      transform: translateY(-50%);
+      p {
+        font-size: 26px;
+        text-align: center;
+        @media (max-width: $maxPhoneWidth) {
+          font-size: 12px;
+          text-align: left;
+          span {
+            display: block;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+  .section2 {
+    background: #010712;
+    .section {
+      overflow: hidden;
+    }
+    .tipInfo {
+      padding: 3rem 0;
+      @media (max-width: $maxPhoneWidth) {
+        width: 90%;
+        padding: 2rem 0;
+      }
+      p {
+        color: #fff;
+        text-align: center;
+        font-size: 16px;
+        @media (max-width: $maxPhoneWidth) {
+          font-size: 10px;
+        }
+      }
+    }
+    .howtowin {
+      max-width: 1100px;
+      display: flex;
+      padding: 3rem 0;
+      border-bottom: 1px solid #535353;
+      border-top: 1px solid #535353;
+      @media (max-width: $maxPhoneWidth) {
+        width: 90%;
+        padding: 2rem 0 10px 0;
+        border-bottom: none;
+      }
+      div {
+        flex: 1;
+        @media (max-width: $maxPhoneWidth) {
+          display: none;
+          &.win {
+            padding-left: 18px;
+            display: block;
+          }
+        }
+      }
+      .share {
+        flex: 0.6;
+      }
+      .arrow {
+        margin-left: 25%;
+      }
+    }
+    .stepBox {
+      max-width: 1100px;
+      padding: 3rem 0;
+      @media (max-width: $maxPhoneWidth) {
+        width: 90%;
+        padding: 0 0 2rem 0;
+      }
+      h3 {
+        position: relative;
+        font-size: 15px;
+        color: #fff;
+        text-align: left;
+        padding-left: 28px;
+        @media (max-width: $maxPhoneWidth) {
+          font-size: 10px;
+          padding-left: 18px;
+        }
+        b,
+        span {
+          display: inline-block;
+          text-align: center;
+          vertical-align: middle;
+        }
+        b {
+          font-size: 18px;
+          margin-right: 40px;
+          @media (max-width: $maxPhoneWidth) {
+            font-size: 13px;
+            margin-right: 15px;
+          }
+        }
+      }
+      .lock {
+        width: 13px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        @media (max-width: $maxPhoneWidth) {
+          width: 10px;
+        }
+      }
+      .step1 {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .step23 {
+        display: flex;
+        @media (max-width: $maxPhoneWidth) {
+          display: block;
+        }
+        h3 {
+          float: left;
+        }
+      }
+      .step2 {
+        flex: 4;
+        overflow: hidden;
+        @media (max-width: $maxPhoneWidth) {
+          margin-bottom: 30px;
+        }
+      }
+      .step3 {
+        flex: 3;
+        overflow: hidden;
+        @media (max-width: $maxPhoneWidth) {
+          margin-bottom: 30px;
+        }
+      }
+      .icon {
+        float: right;
+        a {
+          display: inline-block;
+          width: 40px;
+          height: 40px;
+          margin-right: 30px;
+          background-size: cover;
+          @media (max-width: $maxPhoneWidth) {
+            width: 28px;
+            height: 28px;
+            margin-right: 12px;
+          }
+        }
+        .share1 {
+          background-image: url(https://dz02g1kgtiysz.cloudfront.net/deals/files/191204_145312_icon1.png);
+        }
+        .share2 {
+          background-image: url(https://dz02g1kgtiysz.cloudfront.net/deals/files/191204_145315_icon2.png);
+        }
+        .share3 {
+          background-image: url(https://dz02g1kgtiysz.cloudfront.net/deals/files/191204_145320_icon3.png);
+          margin-right: 60px;
+          @media (max-width: $maxPhoneWidth) {
+            margin-right: 20px;
+          }
+        }
+        .shared1 {
+          background-image: url(https://dz02g1kgtiysz.cloudfront.net/deals/files/191204_145312_icon1.png);
+        }
+        .shared2 {
+          background-image: url(https://dz02g1kgtiysz.cloudfront.net/deals/files/191204_145358_icon2hui.png);
+        }
+        .shared3 {
+          background-image: url(https://dz02g1kgtiysz.cloudfront.net/deals/files/191204_145407_icon3hui.png);
+          margin-right: 60px;
+          @media (max-width: $maxPhoneWidth) {
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+    .main {
+      display: flex;
+      @media (max-width: $maxPhoneWidth) {
+        display: block;
+        width: 95%;
+        margin: 0 auto;
+      }
+      .mainul {
+        width: 100%;
+        flex: 3;
+        overflow: hidden;
+        .mainli {
+          position: relative;
+          float: left;
+          width: 50%;
+          &:before {
+            content: " ";
+            display: block;
+            padding-top: 68%;
+          }
+          .front {
+            box-sizing: border-box;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: #121e39;
+            cursor: pointer;
+            p {
+              position: absolute;
+              top: 50%;
+              width: 100%;
+              color: #fff;
+              font-size: 16px;
+              text-align: center;
+              transform: translateY(-50%);
+            }
+            .product {
+              width: 80%;
+              position: absolute;
+              top: 55%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              &.current {
+                opacity: 0.6;
+              }
+            }
+            &.openedGift {
+              background: white;
+            }
+            &.current {
+              border: 2px solid #5a514e;
+            }
+          }
+          .current {
+            &:before {
+              content: "";
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .maincontent {
+      box-sizing: border-box;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      padding: 5px;
+      @media (max-width: $maxPhoneWidth) {
+        position: relative;
+      }
+    }
+    .today {
+      flex: 4;
+      position: relative;
+      overflow: hidden;
+      min-height: 100px;
+      .productCurrent {
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        background: #121e39;
+        border: 2px solid #5a514e;
+        overflow: hidden;
+        @media (max-width: $maxPhoneWidth) {
+          min-height: 300px;
+          height: auto;
+          margin-bottom: 15px;
+          padding-bottom: 15px;
+        }
+        &.opening {
+          background: #fff;
+        }
+        .back {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          background-size: 100% 100%;
+          overflow: hidden;
+        }
+        &.borderNone {
+          height: 0;
+          min-height: 0;
+          padding-bottom: 68%;
+          border: none;
+        }
+      }
+      .product {
+        display: block;
+        height: 58%;
+        margin: 0 auto;
+        margin-top: 10%;
+        &.actnone {
+          margin-top: 20%;
+        }
+      }
+      .over {
+        position: absolute;
+        top: 16%;
+        left: 50%;
+        z-index: 1;
+        transform: translateX(-50%);
+        width: 30%;
+        @media (max-width: $maxPhoneWidth) {
+          top: 12%;
+        }
+        &.actnone {
+          top: 30%;
+        }
+      }
+      .subicon {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        width: 12%;
+      }
+    }
+    .back {
+      box-sizing: border-box;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      overflow: hidden;
+    }
+    .rulesec {
+      max-width: 1100px;
+      padding: 6rem 0;
+      @media (max-width: $maxPhoneWidth) {
+        width: 90%;
+        padding: 2rem 0;
+      }
+      h1 {
+        font-size: 21px;
+        font-weight: 600;
+        color: #fff;
+        text-align: left;
+        margin-bottom: 15px;
+        @media (max-width: $maxPhoneWidth) {
+          font-size: 16px;
+        }
+      }
+      li {
+        color: #fff;
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        margin: 10px 0;
+      }
+    }
+  }
+  .submitBox {
+    width: 100%;
+    text-align: center;
+  }
+  .opening {
+    background: #fff;
+    .namelist {
+      h3 {
+        color: #48a7db;
+      }
+      .name {
+        color: #5d616b;
+      }
+    }
+  }
+  .actBox {
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    .btnBox {
+      flex: 1;
+      padding-top: 0;
+      a {
+        &:nth-child(2n) {
+          margin-left: 0;
+          margin-top: 20px;
+        }
+      }
+    }
+    .namelist {
+      flex: 1;
+      h3 {
+        color: #fff;
+        font-size: 18px;
+        @media (max-width: $maxPhoneWidth) {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .btnBox {
+    text-align: center;
+    padding-top: 40px;
+    @media (max-width: $maxPhoneWidth) {
+      padding-top: 25px;
+    }
+    a {
+      display: inline-block;
+      height: 20px;
+      line-height: 20px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 8px;
+      background: #48a7db;
+      @media (max-width: $maxPhoneWidth) {
+        font-size: 12px;
+        height: 15px;
+        line-height: 15px;
+      }
+      &:nth-child(2n) {
+        margin-left: 25px;
+      }
+      .counrtybt {
+        height: 20px;
+        vertical-align: text-top;
+        margin-right: 30px;
+        @media (max-width: $maxPhoneWidth) {
+          margin-right: 15px;
+          height: 15px;
+        }
+      }
+      .arrowbtn {
+        height: 10px;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .namelist {
+    width: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    @media (max-width: $maxPhoneWidth) {
+      width: 90%;
+    }
+    h3 {
+      color: #fff;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      text-align: left;
+      @media (max-width: $maxPhoneWidth) {
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 5px;
+      }
+    }
+    .name {
+      color: #fff;
+      width: 100%;
+      margin: 3px;
+      text-align: left;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      @media (max-width: $maxPhoneWidth) {
+        text-align: center;
+      }
+    }
+  }
+
+  .productSlick {
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 9%;
+    margin-bottom: 20px;
+    &.actnone {
+      margin-top: 20%;
+      @media (max-width: $maxPhoneWidth) {
+        :global {
+          .slick-dots {
+            bottom: -20px;
+          }
+        }
+      }
+    }
+  }
+  :global {
+    .slick-dots {
+      position: absolute;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      text-align: center;
+      @media (max-width: $maxPhoneWidth) {
+        bottom: -10px;
+      }
+      li {
+        position: relative;
+        display: inline-block;
+        margin: 0 5px;
+        padding: 0;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+      button {
+        width: 10px;
+        height: 10px;
+        cursor: pointer;
+        font-size: 0;
+        line-height: 0;
+        display: block;
+        padding: 5px;
+        color: transparent;
+        border: 0;
+        outline: none;
+        background: transparent;
+        &:before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 8px;
+          height: 8px;
+          content: " ";
+          text-align: center;
+          border-radius: 50%;
+          background-color: #999;
+        }
+      }
+      .slick-active {
+        button {
+          &:before {
+            background-color: #00a9e0;
+          }
+        }
+      }
+    }
+    .slick-next,
+    .slick-prev {
+      font-size: 0;
+      line-height: 0;
+      position: absolute;
+      top: 42%;
+      display: block;
+      width: 10px;
+      height: 10px;
+      padding: 0;
+      background: transparent;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      cursor: pointer;
+      border: none;
+      &:before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        cursor: pointer;
+        border-top: 3px solid #888;
+        border-left: 3px solid #888;
+      }
+    }
+    .slick-next {
+      right: -25px;
+      &:before {
+        transform: rotate(135deg);
+      }
+    }
+    .slick-prev {
+      left: -25px;
+      &:before {
+        color: #000;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

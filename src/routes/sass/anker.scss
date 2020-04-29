@@ -1,0 +1,43 @@
+@import './public.scss';
+
+$fontFamily: "Whitney", Helvetica, Arial, "sans-serif";
+
+// Custom Size
+$lineHeight: 1.5;
+
+// Color variables
+$color: $ankerColor; 
+// colorPrimary 21D1C4
+$logoColor: #989B9E;
+$starColor: #FEC93B;
+
+// Anker Variables
+$barHeight: 38px;
+$gradientBg: linear-gradient(to right, #00a7e1, #00a7e1);
+$gradientBgHover: linear-gradient(to right, #fff, #fff);
+$btnHoverColor: #fff;
+$btnBorder: 1px solid transparent;
+$btnBorderHover: 1px solid $btnHoverColor;
+$footerBg: $eufyColor;
+
+// 变量作为基础大小单位，使用px单位，方便对标设计图
+$commentFontSize: 12px;
+$fontSize: 14px;
+$subTitleSize: 16px;
+$titleSize: 18px;
+$pageTitleSize: 20px;
+$smallTitleSize: 24px;
+$bigTitleSize: 26px;
+$mobileBigSize: 30px;
+$smallBannerSize: 46px;
+$middleFontSize: 50px;
+$bannerFontSize: 40px;
+$bannerTextWidth: 500px;
+$biggestFontSize: 64px;
+$largeFontSize: 90px;
+$variantTitleSize: 40px; 
+// 60px,120px
+$bannerBgSize: 400px;
+$bannerFontSizeCustom: 75px; 
+// 75/60
+$bannerFontWeight: 500; 

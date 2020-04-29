@@ -1,0 +1,349 @@
+@import "./sass/anker.scss";
+
+.Cable {
+  h1 {
+    font-size: 42px;
+    text-align: center;
+    margin: 0;
+    @media (max-width: $maxPhoneWidth) {
+      font-size: 21px;
+    }
+  }
+  h2 {
+    font-size: 26px;
+    line-height: 1.1;
+    text-align: center;
+    margin: 0;
+    @media (max-width: $maxPhoneWidth) {
+      font-size: 18px;
+    }
+  }
+  h3 {
+    font-size: 24px;
+    font-weight: normal;
+    text-align: left;
+    margin: 0;
+    @media (max-width: $maxPhoneWidth) {
+      font-size: 16px;
+    }
+  }
+  p {
+    font-size: 14px;
+    text-align: left;
+    margin: 6px 0;
+    @media (max-width: $maxPhoneWidth) {
+      font-size: 10px;
+    }
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  .reline {
+    display: block;
+    width: 65px;
+    height: 5px;
+    margin: 15px 0;
+    background: linear-gradient(90deg, #c81c1c, #ff005f);
+    @media (max-width: $maxPhoneWidth) {
+      margin: 10px 0;
+      font-size: 10px;
+    }
+  }
+  .section {
+    position: relative;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      display: block;
+      @media (max-width: $maxPhoneWidth) {
+        &.img {
+          width: 200%;
+          margin-left: -50%;
+        }
+      }
+    }
+    .section {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      padding: 1.5rem;
+      transform: translateX(-50%);
+      @media (max-width: $maxPhoneWidth) {
+        position: static;
+        transform: none;
+        .reline {
+          margin: 0 auto;
+        }
+      }
+    }
+    .content {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      max-width: 500px;
+      @media (max-width: $maxPhoneWidth) {
+        position: static;
+        transform: none;
+      }
+    }
+    h1 {
+      text-align: left;
+      @media (max-width: $maxPhoneWidth) {
+        text-align: center;
+      }
+    }
+    h3 {
+      margin: 15px 0;
+      @media (max-width: $maxPhoneWidth) {
+        margin: 10px 0;
+        text-align: center;
+      }
+    }
+    p {
+      color: grey;
+      font-size: 16px;
+      margin-bottom: 10px;
+      @media (max-width: $maxPhoneWidth) {
+        text-align: center;
+      }
+    }
+  }
+  .section1 {
+    padding: 8rem 0 6rem 0;
+    @media (max-width: $maxPhoneWidth) {
+      padding: 4rem 0 3rem 0;
+    }
+    .content {
+      display: flex;
+      @media (max-width: $maxPhoneWidth) {
+        display: block;
+      }
+    }
+    .infoBox {
+      flex: 1;
+      border-radius: 15px;
+      margin: 0 20px;
+      overflow: hidden;
+      box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+      @media (max-width: $maxPhoneWidth) {
+        margin: 30px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .txtBox {
+      padding: 20px 30px 30px;
+      @media (max-width: $maxPhoneWidth) {
+        padding: 20px;
+      }
+    }
+    .reline {
+      margin: 15px auto 30px auto;
+      @media (max-width: $maxPhoneWidth) {
+        margin: 10px auto 20px auto;
+      }
+    }
+    p {
+      color: grey;
+      margin-bottom: 15px;
+      @media (max-width: $maxPhoneWidth) {
+        margin-bottom: 8px;
+      }
+    }
+    :global(.line2) {
+      height: 60px;
+      @media (max-width: $maxPhoneWidth) {
+        height: 38px;
+      }
+    }
+    :global(.line1) {
+      height: 60px;
+      line-height: 60px;
+      @media (max-width: $maxPhoneWidth) {
+        height: 38px;
+        line-height: 38px;
+      }
+    }
+  }
+  .section2 {
+    padding: 8rem 0 6rem 0;
+    background: #f5f5f5;
+    @media (max-width: $maxPhoneWidth) {
+      padding: 4rem 1.5rem 3rem 1.5rem;
+    }
+    .section {
+      padding: 0 1.5rem;
+    }
+    h1 {
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: 6rem;
+      @media (max-width: $maxPhoneWidth) {
+        font-size: 24px;
+        margin-bottom: 3rem;
+      }
+    }
+    img {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+    .iconArrow {
+      width: 100%;
+      &:after {
+        content: "";
+        display: block;
+        height: 0;
+        overflow: hidden;
+        clear: both;
+      }
+    }
+    .icon {
+      float: left;
+      width: 12%;
+      &:after {
+        content: "";
+        display: block;
+        height: 0;
+        overflow: hidden;
+        clear: both;
+      }
+      @media (max-width: $maxPhoneWidth) {
+        float: none;
+        width: 100%;
+      }
+      img {
+        margin-bottom: 20px;
+        @media (max-width: $maxPhoneWidth) {
+          display: inline-block;
+          max-width: 36%;
+          vertical-align: middle;
+          margin: 0 6% 0 0;
+        }
+      }
+      p {
+        width: 120%;
+        text-align: center;
+        margin-left: -10%;
+        @media (max-width: $maxPhoneWidth) {
+          display: inline-block;
+          width: 56%;
+          vertical-align: middle;
+          margin-left: 0;
+        }
+      }
+    }
+    .arrow {
+      float: left;
+      width: 5.6%;
+      margin-top: 22px;
+      @media (max-width: $maxPhoneWidth) {
+        float: none;
+        width: 100%;
+        margin-top: 0;
+        img {
+          max-width: 35%;
+          margin: 10px 0;
+          transform: rotate(90deg);
+          margin-left: 40px;
+        }
+      }
+    }
+    h3 {
+      margin: 50px 0 20px 0;
+      @media (max-width: $maxPhoneWidth) {
+        text-align: center;
+      }
+    }
+  }
+  .file {
+    all: unset;
+  }
+  .group {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $maxPhoneWidth) {
+      display: block;
+    }
+  }
+  .groupInput {
+    max-width: 550px;
+    margin: 0 5px;
+    position: relative;
+    box-sizing: border-box;
+    vertical-align: middle;
+    transition: 200ms;
+    flex: 1;
+    margin-bottom: 20px;
+    input {
+      box-sizing: border-box;
+      appearance: none;
+      border: none;
+      background: #fff;
+      width: 100%;
+      height: 50px;
+      margin: 0;
+      padding: 0 14px;
+      color: $gray;
+      font-size: 14px;
+      line-height: normal;
+      border: 1px solid #aaa;
+      &[disabled] {
+        background: $grayBglight;
+      }
+      &[readonly] {
+        background: $grayBglight;
+      }
+    }
+    .file {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      opacity: 0;
+      cursor: pointer;
+    }
+    .fileUpload {
+      display: block;
+      box-sizing: border-box;
+      background: #fff;
+      width: 100%;
+      height: 50px;
+      margin: 0;
+      padding: 6px 14px;
+      color: $gray;
+      font-size: 14px;
+      line-height: normal;
+      border: 1px solid #aaa;
+      overflow: hidden;
+      cursor: pointer;
+      p {
+        float: left;
+        width: 80%;
+        color: #666;
+        word-break: keep-all;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      i {
+        float: right;
+        padding: 10px 12px;
+        background-color: #eee;
+        border-radius: 5px;
+      }
+    }
+  }
+}

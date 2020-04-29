@@ -1,0 +1,45 @@
+@import './public.scss';
+
+$fontFamily: 'Avenir Next','Helvetica Neue',Helvetica,Arial,'sans-serif';
+
+// Custom Size
+$lineHeight: 1.5;
+
+// Color variables
+$color: $soundcoreColor; 
+// colorPrimary
+$logoColor: $soundcoreColor;
+$starColor: #f3a707;
+$lightblueBg: #F7FBFE;
+
+// Soundcore Variables
+$gray: #071D49;
+$grayTxtdark: #061a43;
+$gradientBg: $color; 
+$gradientBgHover: linear-gradient(to right, #fff, #fff); 
+$btnHoverColor: #0094c8;
+$btnBorder: 1px solid transparent;
+$btnBorderHover: 1px solid $btnHoverColor;
+$footerBg: $soundcoreColor;
+
+// 变量作为基础大小单位，使用px单位，方便对标设计图
+$commentFontSize: 12px;
+$fontSize: 14px;
+$subTitleSize: 16px;
+$titleSize: 18px;
+$pageTitleSize: 20px;
+$smallTitleSize: 24px;
+$bigTitleSize: 26px;
+$mobileBigSize: 30px;
+$smallBannerSize: 46px;
+$middleFontSize: 50px;
+$bannerFontSize: 60px;
+$bannerTextWidth: 500px;
+$biggestFontSize: 64px;
+$largeFontSize: 90px;
+$variantTitleSize: 90px; 
+// 120px
+$bannerBgSize: 400px;
+$bannerFontSizeCustom: 75px; 
+// 75/60
+$bannerFontWeight: 500; 

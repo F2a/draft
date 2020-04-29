@@ -1,0 +1,226 @@
+{
+  "activity_groups": [
+    {
+      "name": "master",
+      "code": "master",
+      "activity_groups": [],
+      "activities": [
+        {
+          "id": 807,
+          "title": "white",
+          "name": "Nebula Cosmos Max",
+          "detail": "World's First 4K Home Cinema with 3D Audio",
+          "url": "https://www.kickstarter.com/projects/nbl/nebula-cosmos-max-worlds-first-4k-home-cinema-with-3d-audio",
+          "group_code": "",
+          "platform": "mobile_web",
+          "text_color": "",
+          "text_light": "",
+          "text_position": "left",
+          "buttons": [{ "name": "", "link": "" }],
+          "end_time": "2019-12-22T07:00:00.000-08:00",
+          "auto_play": null,
+          "review_username": "",
+          "review_text": "",
+          "review_time": "2019-10-23T00:02:00.000-07:00",
+          "review_star": "",
+          "products": [],
+          "image": {
+            "mini_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/52192/image/mini/%E4%B8%8A%E7%BA%BF%E5%90%8E-Banner_nebula%E5%AE%98%E7%BD%911920x829.jpg?1571815255",
+            "small_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/52192/image/small/%E4%B8%8A%E7%BA%BF%E5%90%8E-Banner_nebula%E5%AE%98%E7%BD%911920x829.jpg?1571815255",
+            "product_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/52192/image/product/%E4%B8%8A%E7%BA%BF%E5%90%8E-Banner_nebula%E5%AE%98%E7%BD%911920x829.jpg?1571815255",
+            "large_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/52192/image/large/%E4%B8%8A%E7%BA%BF%E5%90%8E-Banner_nebula%E5%AE%98%E7%BD%911920x829.jpg?1571815255"
+          },
+          "detail_image": {
+            "mini_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/52193/detail_image/mini/nebula_us_referral_email_banner.jpg?1571887941",
+            "small_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/52193/detail_image/small/nebula_us_referral_email_banner.jpg?1571887941",
+            "product_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/52193/detail_image/product/nebula_us_referral_email_banner.jpg?1571887941",
+            "large_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/52193/detail_image/large/nebula_us_referral_email_banner.jpg?1571887941"
+          },
+          "share_image": {
+            "mini_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/52194/share_image/mini/sound_core_banner3.jpg?1571888147",
+            "small_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/52194/share_image/small/sound_core_banner3.jpg?1571888147",
+            "product_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/52194/share_image/product/sound_core_banner3.jpg?1571888147",
+            "large_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/52194/share_image/large/sound_core_banner3.jpg?1571888147"
+          },
+          "review_image": null,
+          "mobile_image": null
+        },
+        {
+          "id": 768,
+          "title": "white",
+          "name": "\u003cbr\u003eeufy RoboVac\u003cbr\u003e\u003cspan style=\"font-size: 1.5em; font-weight:600\"\u003eMagic Mondays\u003c/span\u003e\u003cbr\u003eHot Deals EVERY Monday",
+          "detail": "",
+          "url": "",
+          "group_code": "",
+          "platform": "mobile_web",
+          "text_color": "white",
+          "text_light": "true",
+          "text_position": "up",
+          "buttons": [
+            {
+              "name": "Start Saving!",
+              "link": "https://www.youtube.com/watch?v=hHW1oY26kxQ"
+            }
+          ],
+          "end_time": "2019-12-02T19:19:00.000-08:00",
+          "auto_play": "true",
+          "review_username": "",
+          "review_text": "",
+          "review_time": "2019-08-02T19:19:00.000-07:00",
+          "review_star": "",
+          "products": [],
+          "image": {
+            "mini_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/51908/image/mini/1.jpg?1571314377",
+            "small_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/51908/image/small/1.jpg?1571314377",
+            "product_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/51908/image/product/1.jpg?1571314377",
+            "large_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/51908/image/large/1.jpg?1571314377"
+          },
+          "detail_image": {
+            "mini_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/51909/detail_image/mini/home_page_T2190.jpg?1564798946",
+            "small_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/51909/detail_image/small/home_page_T2190.jpg?1564798946",
+            "product_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/51909/detail_image/product/home_page_T2190.jpg?1564798946",
+            "large_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/51909/detail_image/large/home_page_T2190.jpg?1564798946"
+          },
+          "share_image": {
+            "mini_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/51910/share_image/mini/home_page_T2190.jpg?1564798947",
+            "small_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/51910/share_image/small/home_page_T2190.jpg?1564798947",
+            "product_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/51910/share_image/product/home_page_T2190.jpg?1564798947",
+            "large_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/51910/share_image/large/home_page_T2190.jpg?1564798947"
+          },
+          "review_image": null,
+          "mobile_image": {
+            "original_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/52189/mobile_image/original/A1376-banner-mobile_2.jpg?1571314379"
+          }
+        },
+        {
+          "id": 661,
+          "title": "white",
+          "name": "\u003cb\u003e\u003cspan style=\"font-size: 1.2em;\"\u003e\u003cspan style=\"white-space:nowrap;\"\u003eThe Most Recommended\u003c/span\u003e\u003cbr\u003eRobot Vacuums\u003c/span\u003e\u003c/b\u003e",
+          "detail": "\u003cspan style=\"white-space: nowrap; font-size: 1.1em\"\u003eeufy makes spring cleaning less of a chore.\u003c/span\u003e\r\n\u003cspan style=\"display: inline-block; margin-top: 5px; font-size: 0.5em\"\u003e*RoboVac 35C is also available on Walmart.com, Dillards.com.\u003c/span\u003e",
+          "url": "",
+          "group_code": "",
+          "platform": "mobile_web",
+          "text_color": "white",
+          "text_light": "true",
+          "text_position": "left",
+          "buttons": [{ "name": "LEARN MORE", "link": "" }],
+          "end_time": "2019-12-18T16:58:00.000-08:00",
+          "auto_play": null,
+          "review_username": "",
+          "review_text": "",
+          "review_time": "2018-12-18T16:58:00.000-08:00",
+          "review_star": "",
+          "products": [],
+          "image": {
+            "mini_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/49003/image/mini/cbs-banner2019.3.28-3.jpg?1553859214",
+            "small_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/49003/image/small/cbs-banner2019.3.28-3.jpg?1553859214",
+            "product_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/49003/image/product/cbs-banner2019.3.28-3.jpg?1553859214",
+            "large_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/49003/image/large/cbs-banner2019.3.28-3.jpg?1553859214"
+          },
+          "detail_image": {
+            "mini_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/49004/detail_image/mini/cbs-banner2019.3.28-3.jpg?1553859215",
+            "small_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/49004/detail_image/small/cbs-banner2019.3.28-3.jpg?1553859215",
+            "product_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/49004/detail_image/product/cbs-banner2019.3.28-3.jpg?1553859215",
+            "large_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/49004/detail_image/large/cbs-banner2019.3.28-3.jpg?1553859215"
+          },
+          "share_image": {
+            "mini_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/49005/share_image/mini/cbs-banner2019.3.28-3.jpg?1553859215",
+            "small_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/49005/share_image/small/cbs-banner2019.3.28-3.jpg?1553859215",
+            "product_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/49005/share_image/product/cbs-banner2019.3.28-3.jpg?1553859215",
+            "large_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/49005/share_image/large/cbs-banner2019.3.28-3.jpg?1553859215"
+          },
+          "review_image": null,
+          "mobile_image": null
+        },
+        {
+          "id": 781,
+          "title": "white",
+          "name": "\u003cb\u003e\u003cspan style=\"font-size:1.0em;color: #ffffff;\"\u003eeufy Security Floodlight Camera\u003c/span\u003e\u003c/b\u003e",
+          "detail": "\u003cspan style=\"font-size:1.5em\"\u003eA Bright Idea for Your Home\u003c/span\u003e",
+          "url": "",
+          "group_code": "",
+          "platform": "mobile_web",
+          "text_color": "white",
+          "text_light": "true",
+          "text_position": "left",
+          "buttons": [
+            {
+              "name": "LEARN MORE",
+              "link": "https://beta.eufylife.com/products/variant/floodlight-camera/T84201W1"
+            }
+          ],
+          "end_time": "2019-11-16T03:08:00.000-08:00",
+          "auto_play": null,
+          "review_username": "",
+          "review_text": "",
+          "review_time": "2019-09-16T03:08:00.000-07:00",
+          "review_star": "",
+          "products": [],
+          "image": {
+            "mini_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/52112/image/mini/%E6%97%A0logo.jpg?1568685046",
+            "small_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/52112/image/small/%E6%97%A0logo.jpg?1568685046",
+            "product_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/52112/image/product/%E6%97%A0logo.jpg?1568685046",
+            "large_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/52112/image/large/%E6%97%A0logo.jpg?1568685046"
+          },
+          "detail_image": {
+            "mini_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/52113/detail_image/mini/%E6%97%A0logo.jpg?1568685047",
+            "small_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/52113/detail_image/small/%E6%97%A0logo.jpg?1568685047",
+            "product_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/52113/detail_image/product/%E6%97%A0logo.jpg?1568685047",
+            "large_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/52113/detail_image/large/%E6%97%A0logo.jpg?1568685047"
+          },
+          "share_image": {
+            "mini_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/52114/share_image/mini/%E6%97%A0logo.jpg?1568685048",
+            "small_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/52114/share_image/small/%E6%97%A0logo.jpg?1568685048",
+            "product_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/52114/share_image/product/%E6%97%A0logo.jpg?1568685048",
+            "large_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/52114/share_image/large/%E6%97%A0logo.jpg?1568685048"
+          },
+          "review_image": null,
+          "mobile_image": null
+        },
+        {
+          "id": 703,
+          "title": "white",
+          "name": "eufyCam E",
+          "detail": "1 Charge = 365-Day Surveillance",
+          "url": "",
+          "group_code": "",
+          "platform": "mobile_web",
+          "text_color": "white",
+          "text_light": "true",
+          "text_position": "left",
+          "buttons": [{ "name": "Reserve Now", "link": "" }],
+          "end_time": "2021-02-15T21:34:00.000-08:00",
+          "auto_play": null,
+          "review_username": "",
+          "review_text": "",
+          "review_time": "2019-02-15T21:34:00.000-08:00",
+          "review_star": "",
+          "products": [],
+          "image": {
+            "mini_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/51507/image/mini/eufy_webbanner_V1.jpg?1550295960",
+            "small_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/51507/image/small/eufy_webbanner_V1.jpg?1550295960",
+            "product_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/51507/image/product/eufy_webbanner_V1.jpg?1550295960",
+            "large_url": "https://d2fn1ti8mb8fwr.cloudfront.net/spree/activities/51507/image/large/eufy_webbanner_V1.jpg?1550295960"
+          },
+          "detail_image": null,
+          "share_image": null,
+          "review_image": null,
+          "mobile_image": null
+        }
+      ]
+    },
+    { "name": "sub", "code": "sub", "activity_groups": [], "activities": [] },
+    {
+      "name": "WHAT'S NEW AT Eufylife",
+      "code": "theme",
+      "activity_groups": [],
+      "activities": []
+    },
+    {
+      "name": "Pop notes",
+      "code": "pop-notes",
+      "activity_groups": [],
+      "activities": []
+    }
+  ]
+}
