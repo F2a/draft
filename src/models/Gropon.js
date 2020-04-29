@@ -20,11 +20,11 @@ const load = () => loadDeal(key, 'eufy::T2118', { group_by: '' });
     const { deals } = getState();
     const promises = [];
     if (!deals[key]) promises.push(dispatch(load()).catch(() => null));
-    if (__SERVER__) await Promise.all(promises);
+    await Promise.all(promises);
   },
   defer: ({ store: { dispatch, getState } }) => {
     const { deals } = getState();
-    if (__DEVELOPMENT__ || !deals[key]) dispatch(load());
+    if (!deals[key]) dispatch(load());
   },
 })
 
