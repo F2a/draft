@@ -18,7 +18,7 @@ class MomShare extends React.Component {
       lang: {
         screenProduct: [1, 1, 1, 1, 1, 1, 1, 11, 1, 1, 1, 1, 1, 1, 1, 11, 1, 1],
         bannerMobile:
-          "https://dz02g1kgtiysz.cloudfront.net/deals/files/200413_112954_bannermo.jpg",
+          "https://dz02g1kgtiysz.cloudfront.net/deals/err/200525_163127_-222x.png",
       },
     };
     this.closeButton = React.createRef();
@@ -142,22 +142,20 @@ class MomShare extends React.Component {
     );
   };
 
-  liked = () => {
-
-  }
+  liked = () => {};
 
   closeModal = () => {
     this.setState({ show: false });
   };
 
-  showModal = act => {
+  showModal = (act) => {
     // this.loginModal()
     // this.formModal()
     // this.detailModal()
     if (this.hasLogin()) {
       this.setState({ modalDom: act });
     } else {
-      this.setState({ modalDom: 'loginModal' });
+      this.setState({ modalDom: "loginModal" });
     }
     this.setState({ show: true }, () => {
       if (this.closeButton.current) this.closeButton.current.focus();
@@ -348,7 +346,11 @@ class MomShare extends React.Component {
               alt=""
             />
             <p className={styles.name}>shenoy</p>
-            <a className={styles.xin} role="button" onClick={() => this.liked(detail)}>
+            <a
+              className={styles.xin}
+              role="button"
+              onClick={() => this.liked(detail)}
+            >
               <img
                 src="https://dz02g1kgtiysz.cloudfront.net/deals/files/200410_115645_woman.png"
                 alt=""
@@ -419,24 +421,35 @@ class MomShare extends React.Component {
     const { lang = {}, modalDom, current } = this.state;
     return (
       <div className={styles.momshared}>
-        <a
-          role="button"
-          onClick={() => this.showModal("formModal")}
-          className={styles.banner}
-        >
+        <div className={styles.banner}>
+          <div className={styles.section}>
+            <div className={`${styles.btnBox} ${styles.bannerbtn}`}>
+              <h1>#RestyleYourRoboVac</h1>
+              <h2>
+                Erster Gewinn <br />
+                <i>Ein</i> eufy RoboVac G10 Hybrid
+              </h2>
+              <button
+                type="button"
+                className={styles.btns}
+                onClick={() => this.showModal("formModal")}
+              >
+                {lang.postOne}
+              </button>
+            </div>
+          </div>
           {lang.bannerMobile && this.isMobile() ? (
             <img src={lang.bannerMobile} alt="" />
           ) : (
             <img
               className={styles.img}
               src={
-                lang.banner ||
-                "https://dz02g1kgtiysz.cloudfront.net/deals/files/200409_110745_banner.jpg"
+                "https://dz02g1kgtiysz.cloudfront.net/deals/err/200525_150128_-72.png"
               }
               alt=""
             />
           )}
-        </a>
+        </div>
 
         <section className={styles.prizeSec}>
           <div className={styles.section}>
@@ -445,130 +458,89 @@ class MomShare extends React.Component {
                 <h2 className={styles.titletxt}>Der Ehrenpreis</h2>
                 <img
                   className={styles.caidai}
-                  src="https://dz02g1kgtiysz.cloudfront.net/deals/files/200409_110752_caidai.png"
+                  src="https://dz02g1kgtiysz.cloudfront.net/deals/err/200525_152215_-1--12x.png"
                   alt=""
                 />
               </div>
               <div className={styles.giftBox}>
-                <img
-                  className={styles.giftMobile}
-                  src="https://dz02g1kgtiysz.cloudfront.net/deals/files/200413_111612_prizemo.png"
-                  alt=""
-                />
-                <div className={styles.gift}>
-                  <div className={styles.paddingBox}>
-                    <div className={styles.img}>
-                      <img
-                        src="https://dz02g1kgtiysz.cloudfront.net/deals/files/200409_110756_g1.png"
-                        alt=""
-                      />
-                    </div>
-                    <div className={styles.content}>
-                      <h3>xxxxxxxxxxx xxxx</h3>
-                      <ul>
-                        <li>xxxxxxxxx xxx xxxx xxxxxx xxxx xxxxxx</li>
-                        <li>xxxxx xxxx xxx xxxx xxxxxx xxxx xxxxxx</li>
-                        <li>
-                          xxxxx xxxx xxx xxxx xxx xxxxxx xxxx xxxx xxxxx xxxxxx{" "}
-                        </li>
-                      </ul>
-                    </div>
+                <div className={styles.gift1}>
+                  <img
+                    className={styles.product}
+                    src="https://dz02g1kgtiysz.cloudfront.net/deals/err/200525_152716_-932x.png"
+                    alt=""
+                  />
+                  <div className={styles.content}>
+                    <p className={styles.h1}>Erster Gewinn </p>
+                    <p className={styles.h2}>
+                      <i>Ein</i> eufy RoboVac G10 Hybrid
+                    </p>
                   </div>
                 </div>
-                <div className={styles.gift}>
-                  <div className={styles.paddingBox}>
-                    <div className={styles.img}>
-                      <img
-                        src="https://dz02g1kgtiysz.cloudfront.net/deals/files/200409_110756_g1.png"
-                        alt=""
-                      />
-                    </div>
-                    <div className={styles.content}>
-                      <h3>xxxxxxxxxxx xxxx</h3>
-                      <ul>
-                        <li>xxxxxxxxx xxx xxxx xxxxxx xxxx xxxxxx</li>
-                        <li>xxxxx xxxx xxx xxxx xxxxxx xxxx xxxxxx</li>
-                        <li>
-                          xxxxx xxxx xxx xxxx xxx xxxxxx xxxx xxxx xxxxx xxxxxx{" "}
-                        </li>
-                      </ul>
-                    </div>
+                <div className={`${styles.gift1} ${styles.gift2mobile}`}>
+                  <img
+                    className={styles.product}
+                    src="https://dz02g1kgtiysz.cloudfront.net/deals/err/200525_152716_-932x.png"
+                    alt=""
+                  />
+                  <div className={styles.content}>
+                    <p className={styles.h1}>Erster Gewinn </p>
+                    <p className={styles.h2}>
+                      <i>Ein</i> eufy RoboVac G10 Hybrid
+                    </p>
                   </div>
                 </div>
-                <div className={styles.gift}>
-                  <div className={styles.paddingBox}>
-                    <div className={styles.img}>
-                      <img
-                        src="https://dz02g1kgtiysz.cloudfront.net/deals/files/200409_110756_g1.png"
-                        alt=""
-                      />
-                    </div>
-                    <div className={styles.content}>
-                      <h3>xxxxxxxxxxx xxxx</h3>
-                      <ul>
-                        <li>xxxxxxxxx xxx xxxx xxxxxx xxxx xxxxxx</li>
-                        <li>xxxxx xxxx xxx xxxx xxxxxx xxxx xxxxxx</li>
-                        <li>
-                          xxxxx xxxx xxx xxxx xxx xxxxxx xxxx xxxx xxxxx xxxxxx{" "}
-                        </li>
-                      </ul>
-                    </div>
+                
+                <div className={styles.bottom}>
+                  <div className={`${styles.gift} ${styles.gift2}`}>
+                    <p className={styles.h1}>Erster Gewinn </p>
+                    <img
+                      className={styles.product}
+                      src="https://dz02g1kgtiysz.cloudfront.net/deals/err/200525_152716_-932x.png"
+                      alt=""
+                    />
+                    <p className={styles.h2}>
+                      <i>Ein</i> eufy RoboVac G10 Hybrid
+                    </p>
                   </div>
-                </div>
-                <div className={styles.gift}>
-                  <div className={styles.paddingBox}>
-                    <div className={styles.img}>
-                      <img
-                        src="https://dz02g1kgtiysz.cloudfront.net/deals/files/200409_110756_g1.png"
-                        alt=""
-                      />
-                    </div>
-                    <div className={styles.content}>
-                      <h3>xxxxxxxxxxx xxxx</h3>
-                      <ul>
-                        <li>xxxxxxxxx xxx xxxx xxxxxx xxxx xxxxxx</li>
-                        <li>xxxxx xxxx xxx xxxx xxxxxx xxxx xxxxxx</li>
-                        <li>
-                          xxxxx xxxx xxx xxxx xxx xxxxxx xxxx xxxx xxxxx xxxxxx{" "}
-                        </li>
-                      </ul>
-                    </div>
+                  <div className={`${styles.gift} ${styles.gift3}`}>
+                    <p className={styles.h1}>Erster Gewinn </p>
+                    <img
+                      className={styles.product}
+                      src="https://dz02g1kgtiysz.cloudfront.net/deals/err/200525_152716_-932x.png"
+                      alt=""
+                    />
+                    <p className={styles.h2}>
+                      <i>Ein</i> eufy RoboVac G10 Hybrid
+                    </p>
+                  </div>
+                  <div className={`${styles.gift} ${styles.gift4}`}>
+                    <p className={styles.h1}>Erster Gewinn </p>
+                    <img
+                      className={styles.product}
+                      src="https://dz02g1kgtiysz.cloudfront.net/deals/err/200525_152716_-932x.png"
+                      alt=""
+                    />
+                    <p className={styles.h2}>
+                      <i>Ein</i> eufy RoboVac G10 Hybrid
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-
-        <section className={styles.stepSec}>
-          <div className={styles.section}>
-            <div className={styles.title}>
-              <h2 className={styles.titletxt}>Der Ehrenpreis</h2>
-              <span className={styles.line} />
-            </div>
+            <div className={styles.arrow} />
           </div>
         </section>
 
         <section className={styles.stepLine}>
           <div className={styles.section}>
+            <div className={styles.title}>
+              <h2 className={styles.titletxt}>Der Ehrenpreis</h2>
+            </div>
             <div className={styles.stepBox}>
-              {this.isMobile() ? (
-                <img
-                  className={styles.stepBack}
-                  src="https://dz02g1kgtiysz.cloudfront.net/deals/files/200413_120045_stepmo.png"
-                  alt=""
-                />
-              ) : (
-                <img
-                  className={styles.stepBack}
-                  src="https://dz02g1kgtiysz.cloudfront.net/deals/files/200409_110830_sec2pc.png"
-                  alt=""
-                />
-              )}
               <div className={styles.stepAll}>
                 <div className={styles.step}>
+                  <p className={styles.h1}>Step1</p>
                   <div className={styles.stepTop}>
-                    <p>Step1</p>
                     <img
                       src="https://dz02g1kgtiysz.cloudfront.net/deals/files/200409_110812_icon1.png"
                       alt=""
@@ -580,8 +552,8 @@ class MomShare extends React.Component {
                   </div>
                 </div>
                 <div className={styles.step}>
+                  <p className={styles.h1}>Step1</p>
                   <div className={styles.stepTop}>
-                    <p>Step1</p>
                     <img
                       src="https://dz02g1kgtiysz.cloudfront.net/deals/files/200409_110812_icon1.png"
                       alt=""
@@ -593,8 +565,8 @@ class MomShare extends React.Component {
                   </div>
                 </div>
                 <div className={styles.step}>
+                  <p className={styles.h1}>Step1</p>
                   <div className={styles.stepTop}>
-                    <p>Step1</p>
                     <img
                       src="https://dz02g1kgtiysz.cloudfront.net/deals/files/200409_110812_icon1.png"
                       alt=""

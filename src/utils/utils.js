@@ -221,7 +221,7 @@ export default {
         let trailing = true;
 
         if (typeof func !== 'function') {
-            throw new TypeError('Expected a function');
+           return false;
         }
         // options 是否是对象
         if (this.isObject(options)) {

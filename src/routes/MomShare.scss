@@ -1,5 +1,7 @@
 @import "./sass/anker.scss";
 
+$yellow: #ffa645;
+$blue: #22D1C4;
 .momshared {
   h1 {
     font-family: "Booster Next FY";
@@ -15,7 +17,7 @@
 
   h2 {
     font-family: "Booster Next FY";
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 600;
     line-height: 1.1;
     text-align: center;
@@ -64,18 +66,22 @@
   }
 
   div,
-  button {
+  button,
+  select {
     font-family: "Booster Next FY";
     box-sizing: border-box;
   }
+
   a,
   button {
     cursor: pointer;
   }
+
   section {
     box-sizing: border-box;
     padding: 0 2%;
   }
+
   .section {
     position: relative;
     box-sizing: border-box;
@@ -83,6 +89,14 @@
     margin: 0 auto;
     overflow: hidden;
   }
+
+  .reactPlayer {
+    height: 420px;
+    @media (max-width: $maxPhoneWidth) {
+      height: 200px;
+    }
+  }
+
   .caidaititle {
     position: relative;
     max-width: 90%;
@@ -93,9 +107,10 @@
       margin-bottom: 20px;
     }
     .titletxt {
+      width: 100%;
       color: #fff;
       position: absolute;
-      top: 50%;
+      top: 52%;
       left: 50%;
       transform: translate(-50%, -50%);
     }
@@ -107,6 +122,7 @@
       }
     }
   }
+
   .title {
     width: 100%;
     padding: 20px 0;
@@ -117,7 +133,7 @@
       z-index: 2;
       display: inline-block;
       color: #ff83a3;
-      background-color: #fee7ef;
+      background-color: #fff;
       padding: 0 30px;
     }
     .line {
@@ -150,12 +166,12 @@
     margin: 2px;
     border: 0;
     border-radius: 20px;
-    background: #ffa645;
+    background: $yellow;
     cursor: pointer;
 
     &.btnsBorder {
-      color: #ffa645;
-      border: 1px solid #ffa645;
+      color: $yellow;
+      border: 1px solid $yellow;
       background: transparent;
     }
     @media (max-width: $maxPhoneWidth) {
@@ -191,7 +207,7 @@
       margin: 0;
       border: 0;
       border-radius: 20px;
-      background: #ffa645;
+      background: $yellow;
       position: relative;
       z-index: 1;
       @media (max-width: $maxPhoneWidth) {
@@ -200,6 +216,7 @@
         line-height: 30px;
       }
     }
+    
     .file_upload {
       opacity: 0;
       box-sizing: border-box;
@@ -220,12 +237,70 @@
     }
   }
 
+  .blocktip {
+    font-size: 16px;
+    text-align: center;
+    padding: 20px 0;
+  }
+
   .banner {
     display: block;
     position: relative;
     width: 100%;
     overflow: hidden;
-
+    .section {
+      width: 100%;
+      position: absolute;
+      top: 0;bottom: 0;
+      left: 50%;
+      overflow: visible;
+      transform: translate(-50%, 0);
+    }
+    .bannerbtn {
+      max-width: 40%;
+      text-align: left;
+      position: absolute;
+      top: 43%;
+      left: 0;
+      transform: translate(0%, -50%);
+      @media (max-width: $maxPhoneWidth) {
+        max-width: 90%;
+        text-align: center;
+        top: 6%;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+      h1 {
+        color: #fff;
+        font-size: 36px;
+        text-align: left;
+        margin-bottom: 1rem;
+        @media (max-width: $maxPhoneWidth) {
+          text-align: center;
+          font-size: 24px;
+        }
+      }
+      h2 {
+        color: #fff;
+        font-size: 24px;
+        font-weight: 600;
+        text-align: left;
+        margin-bottom: 1.5rem;
+        @media (max-width: $maxPhoneWidth) {
+          text-align: center;
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+      }
+      i {
+        font-style: normal;
+        color: $yellow;
+      }
+      button {
+        font-size: 20px;
+        white-space: nowrap;
+      }
+    }
     img {
       width: 100%;
       display: block;
@@ -240,177 +315,251 @@
 
   .prizeSec {
     padding: 4rem 0;
-    background-color: #fee7ef;
+    margin-top: -18rem;
+    background-color: #fff;
     @media (max-width: $maxPhoneWidth) {
       padding: 2rem 0;
+      margin-top: -8rem;
     }
     .caidaititle {
       width: 500px;
+      margin: 0 auto;
+      margin-bottom: -3rem;
+      .titletxt {
+        top: 42%;
+      }
     }
-    .giftMobile {
+    .section {
+      overflow: visible;
+    }
+    .giftBox {
+      background-color: #EEF2F3;
+      padding: 3rem;
+      border-radius: 10px;
+      @media (max-width: $maxPhoneWidth) {
+        padding: 2rem 1rem;
+        margin: 10px;
+      }
+    }
+    .gift1 {
+      position: relative;
+      width: 85%;
+      margin: 0 auto;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0px 0 15px #ddd;
+      background-image: url(https://dz02g1kgtiysz.cloudfront.net/deals/err/200525_154817_back2x.png);
+      background-repeat: no-repeat;
+      background-position: top 50% right 5%;
+      background-size: 10%;
+      @media (max-width: $maxPhoneWidth) {
+        width: 90%;
+        margin-top: 1rem;
+        background-size: 15%;
+      }
+      .product {
+        position: absolute;
+        top: -25%;
+        left: -5%;
+        height: 150%;
+      }
+      .content {
+        padding: 2rem 18%;
+        @media (max-width: $maxPhoneWidth) {
+          padding: 1rem 1rem 1rem 30%;
+        }
+      }
+      .h1 {
+        color:$blue;
+        font-size: 36px;
+        font-weight: 600;
+        text-align: left;
+        margin: 0;
+        @media (max-width: $maxPhoneWidth) {
+          font-size: 20px;
+        }
+      }
+      .h2 {
+        color: #3A3A3A;
+        font-size: 24px;
+        text-align: left;
+        margin: 0;
+        @media (max-width: $maxPhoneWidth) {
+          font-size: 14px;
+        }
+      }
+      i {
+        font-size: 32px;
+        font-style: normal;
+        color: $yellow;
+        @media (max-width: $maxPhoneWidth) {
+          font-size: 16px;
+        }
+      }
+    }
+    .gift2mobile {
       display: none;
       @media (max-width: $maxPhoneWidth) {
         display: block;
-        width: 85%;
-        margin: 0 auto;
-        margin-top: 15px;
+        margin-top: 3rem;
       }
     }
-    .giftBox {
+    .bottom {
       display: flex;
+      margin-top: 6%;
       @media (max-width: $maxPhoneWidth) {
-        display: block;
-        margin: 10px;
-        padding: 10px 0;
-        border-radius: 10px;
-        background-color: #fff;
-        overflow: hidden;
+        margin-top: 3rem;
+      }
+      .gift2 {
+        @media (max-width: $maxPhoneWidth) {
+          display: none;
+          margin-top: 3rem;
+        }
       }
     }
     .gift {
-      width: 25%;
-      padding: 0 10px;
-      @media (max-width: $maxPhoneWidth) {
-        width: 100%;
-        padding: 0;
-        &:last-child {
-          .content {
-            border: none;
-          }
-        }
-      }
-    }
-    .paddingBox {
-      padding: 20px 0;
+      flex: 1;height: 100%;
       border-radius: 10px;
       background-color: #fff;
+      margin-right: 2rem;
+      padding: 2rem;
+      box-shadow: 0px 0 15px #ddd;
+      background-image: url(https://dz02g1kgtiysz.cloudfront.net/deals/err/200525_154817_back2x.png);
+      background-repeat: no-repeat;
+      background-position: top 30% left 5%;
+      background-size: 20%;
       @media (max-width: $maxPhoneWidth) {
-        padding: 15px;
-        padding-bottom: 0;
-        border-radius: 0;
+        margin-right: 1rem;
+        padding: 1rem;
+        background-size: 30%;
       }
-    }
-    .img {
-      padding-left: 5%;
-      @media (max-width: $maxPhoneWidth) {
-        display: none;
+      &:last-child {
+        margin: 0;
       }
-      img {
+      .product {
         display: block;
-        height: 120px;
+        width: 60%;
         margin: 0 auto;
-        @media (max-width: $maxPadWidth) {
-          height: 90px;
+        margin-bottom: 10px;
+        @media (max-width: $maxPhoneWidth) {
+          width: 80%;
+        }
+      }
+      .h1 {
+        color:$blue;
+        font-size: 26px;
+        font-weight: 600;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 10px;
+        @media (max-width: $maxPhoneWidth) {
+          font-size: 16px;
+        }
+      }
+      .h2 {
+        color: #3A3A3A;
+        font-size: 18px;
+        text-align: center;
+        margin: 0;
+        @media (max-width: $maxPhoneWidth) {
+          font-size: 12px;
+        }
+      }
+      i {
+        font-size: 24px;
+        font-style: normal;
+        color: $yellow;
+        @media (max-width: $maxPhoneWidth) {
+          font-size: 14px;
         }
       }
     }
-    .content {
-      padding: 20px 15px 0 15px;
-      padding-top: 20px;
-      @media (max-width: $maxPhoneWidth) {
-        padding: 0 0 15px 0;
-        border-bottom: 1px solid #ffcdd9;
-      }
-      h3 {
-        padding-bottom: 10px;
-      }
-      li {
-        color: #474747;
-        padding-top: 8px;
-      }
-    }
-  }
-
-  .stepSec {
-    padding-top: 4rem;
-    background-color: #fee7ef;
-    position: relative;
-    @media (max-width: $maxPhoneWidth) {
-      padding: 1rem 0;
+    .arrow {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translate(-50%) rotate(45deg);
+      background-color: #EEF2F3;
     }
   }
 
   .stepLine {
-    padding: 2rem 0;
-    background: linear-gradient(
-      #fee7ef 0%,
-      #fee7ef 50%,
-      #fff6f7 50%,
-      #fff6f7 100%
-    );
+    padding-bottom: 6rem;
+    background-color: #fff;
     @media (max-width: $maxPhoneWidth) {
-      padding: 0;
+      padding: 2rem 0;
+    }
+    .section {
+      max-width: 1000px;
+      @media (max-width: $maxPhoneWidth) {
+        margin: 10px;
+      }
+    }
+    .title {
+      padding-bottom: 3rem;
+      @media (max-width: $maxPhoneWidth) {
+        padding-top: 0;
+      }
+    }
+    .titletxt {
+      color: #3A3A3A;
     }
     .stepBox {
       position: relative;
     }
-    .stepBack {
-      display: block;
-      width: 90%;
-      margin: 0 auto;
-      @media (max-width: $maxPhoneWidth) {
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-    }
     .stepAll {
-      position: absolute;
-      width: 90%;
-      left: 5%;
-      top: 0;
-      z-index: 1;
       display: flex;
       @media (max-width: $maxPhoneWidth) {
         display: block;
         position: relative;
         left: 0;
         margin: 0 auto;
+        padding: 20px 0;
       }
     }
     .step {
+      flex: 1;
+      height: 100%;
       position: relative;
       padding: 2rem;
-      padding-top: 42px;
+      margin-left: 2rem;
+      background-color: #FFF8EC;
+      &:first-child {
+        margin-left: 0;
+      }
       @media (max-width: $maxPadWidth) {
         padding-top: 20px;
+        margin-left: 0;
+        margin-bottom: 2rem;
       }
-      @media (max-width: $maxPhoneWidth) {
-        display: block;
-        position: static;
-        padding: 1rem;
-        padding-top: 15px;
+      .h1 {
+        position: absolute;
+        top: 0;
+        left: 2rem;
+        font-size: 18px;
+        font-weight: 600;
+        color: $yellow;
+        transform: translateY(-50%);
+        margin: 0;
       }
     }
     .stepTop {
       text-align: center;
-      p {
-        display: inline-block;
-        color: #ff83a3;
-        font-size: 24px;
-        @media (max-width: $maxPadWidth) {
-          font-size: 16px;
-        }
-        @media (max-width: $maxPhoneWidth) {
-          font-size: 14px;
-        }
-      }
+      margin-bottom: 10px;
       img {
-        width: 30px;
-        margin-bottom: -5px;
-        margin-left: 10px;
+        width: 50px;
         display: inline-block;
         @media (max-width: $maxPadWidth) {
-          width: 20px;
+          width: 40px;
         }
       }
     }
     .stepContent {
-      font-size: 14px;
-      color: #484848;
-      padding-top: 15px;
+      font-size: 16px;
+      color: #3a3a3a;
+      padding-top: 10px;
       text-align: center;
       @media (max-width: $maxPadWidth) {
         padding-top: 5px;
@@ -425,9 +574,15 @@
       padding-bottom: 2rem;
     }
     .showForm {
-      text-align: right;
+      text-align: center;
+      padding: 1.5rem 0;
       @media (max-width: $maxPhoneWidth) {
         text-align: center;
+      }
+      button {
+        font-size: 16px;
+        height: 40px;
+        line-height: 40px;
       }
     }
     .caidaititle {
@@ -470,18 +625,24 @@
       }
       .btn {
         color: #4a4849;
-        font-size: 18px;
+        font-size: 16px;
+        font-weight: 600;
         padding: 0 10px;
         cursor: pointer;
       }
       .current {
         color: #ff83a3;
       }
+      span {
+        font-size: 16px;
+        font-weight: 600;
+      }
       select {
         height: 26px;
         display: inline-block;
         color: #4a4849;
-        font-size: 14px;
+        font-size: 16px;
+        text-decoration: underline;
         box-sizing: border-box;
         padding-left: 15px;
         border: 0;
@@ -500,6 +661,10 @@
 
   .masonry {
     padding-bottom: 20px;
+    @media (max-width: $maxPhoneWidth) {
+      padding: 0 5%;
+      padding-bottom: 20px;
+    }
     .water {
       box-sizing: border-box;
       width: 25%;
@@ -509,43 +674,33 @@
         width: 33.3%;
       }
       @media (max-width: $maxPhoneWidth) {
-        width: 50%;
+        width: 90%;
       }
     }
   }
 
   .showimg {
+    width: 100%;
     position: relative;
+    overflow: hidden;
     border-radius: 10px 10px 0 0;
+    background-color: #fff;
     img {
       width: 100%;
       max-height: 500px;
     }
-    .showBtn {
-      position: absolute;
-      bottom: 15px;
-      right: 5px;
-      button {
-        border: none;
-        outline: none;
-        background: transparent;
-        padding: 0;
-        margin: 0 10px;
-        vertical-align: top;
-      }
-      img {
-        width: 25px;
-      }
-      span {
-        display: inline-block;
-        height: 25px;
-        line-height: 25px;
-        color: #fff;
-        font-size: 16px;
-        font-weight: 600;
-        @media (max-width: $maxPhoneWidth) {
-          font-size: 14px;
-        }
+    button {
+      display: block;
+      border: none;
+      outline: none;
+      background: transparent;
+      padding: 0;
+      margin: 0;
+    }
+    .reactPlayer {
+      height: 160px;
+      @media (max-width: $maxPhoneWidth) {
+        height: 182px;
       }
     }
   }
@@ -559,7 +714,8 @@
     }
     .showContenttop {
       overflow: hidden;
-      padding-bottom: 15px;
+      padding-bottom: 10px;
+      cursor: pointer;
     }
     .product {
       width: auto;
@@ -578,12 +734,12 @@
       &:hover {
         color: #fff;
         border: none;
-        background: #ffa645;
+        background: $yellow;
       }
     }
     h3 {
       color: #474747;
-      font-size: 18px;
+      font-size: 16px;
       text-align: left;
       @media (max-width: $maxPhoneWidth) {
         font-size: 16px;
@@ -593,24 +749,26 @@
       display: block;
       width: 100%;
       height: 0;
-      margin: 15px 0;
+      margin: 10px 0;
       border-bottom: 1px solid #eee;
     }
 
     .showName {
-      img {
+      overflow: hidden;
+      .showNameIng {
+        float: left;
         height: 50px;
         vertical-align: top;
         @media (max-width: $maxPhoneWidth) {
           height: 40px;
         }
       }
-      span {
-        display: inline-block;
+      .showNameTxt {
+        float: left;
         height: 50px;
         line-height: 50px;
         color: #474747;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 600;
         margin-left: 20px;
         @media (max-width: $maxPhoneWidth) {
@@ -618,6 +776,35 @@
           line-height: 40px;
           font-size: 14px;
           margin-left: 10px;
+        }
+      }
+      .showBtn {
+        float: right;
+        button {
+          border: none;
+          outline: none;
+          background: transparent;
+          padding: 0;
+          margin: 0 10px;
+          vertical-align: top;
+        }
+        img {
+          width: 25px;
+          padding: 12px 0;
+          @media (max-width: $maxPhoneWidth) {
+            padding: 7px 0;
+          }
+        }
+        span {
+          display: inline-block;
+          height: 50px;
+          line-height: 50px;
+          color: #474747;
+          font-size: 16px;
+          @media (max-width: $maxPhoneWidth) {
+            height: 40px;
+            line-height: 40px;
+          }
         }
       }
     }
@@ -630,7 +817,7 @@
       padding-bottom: 2rem;
     }
     .titletxt {
-      background-color: #fff6f7;
+      background-color: #fff;
     }
     ul {
       width: 80%;
@@ -642,7 +829,7 @@
     }
     li {
       color: #474747;
-      font-size: 16px;
+      font-size: 14px;
       padding-bottom: 10px;
       @media (max-width: $maxPhoneWidth) {
         font-size: 14px;
@@ -655,9 +842,15 @@
     background-color: #fee7ef;
     .caidaititle {
       width: 650px;
+      h2 {
+        font-size: 28px;
+        @media (max-width: $maxPhoneWidth) {
+          font-size: 17px;
+        }
+      }
       @media (max-width: $maxPhoneWidth) {
         .caidai {
-          min-height: 70px;
+          min-height: 80px;
         }
       }
     }
@@ -726,12 +919,14 @@
     max-width: 1000px;
     padding: 2.5rem;
     z-index: 200;
+    .content {
+      overflow: auto;
+    }
     @media only screen and (max-width: $maxPhoneWidth) {
       width: 90%;
       padding: 2.5rem 1rem 1rem 1rem;
       .content {
         max-height: 500px;
-        overflow: auto;
       }
     }
   }
@@ -749,7 +944,7 @@
   .loginBox {
     color: #fff;
     width: 100%;
-    padding: 4rem 6rem;
+    padding: 4rem 0;
     @media (max-width: $maxPhoneWidth) {
       padding: 2rem;
     }
@@ -759,8 +954,11 @@
       font-size: 18px;
       font-weight: 600;
       text-align: center;
+      padding: 0 1rem;
       padding-bottom: 20px;
       @media (max-width: $maxPhoneWidth) {
+        padding: 0;
+        padding-bottom: 20px;
         font-size: 14px;
       }
     }
@@ -777,14 +975,20 @@
     .google {
       width: 100%;
       height: $heightbtn;
+      padding: 0 6rem;
       margin-bottom: 20px;
-      background-color: #3c6cd9;
+      @media (max-width: $maxPhoneWidth) {
+        padding: 0;
+      }
     }
 
     .facebook {
       width: 100%;
+      padding: 0 6rem;
       height: $heightbtn;
-      background-color: #3c6cd9;
+      @media (max-width: $maxPhoneWidth) {
+        padding: 0;
+      }
     }
   }
 
@@ -816,7 +1020,6 @@
     .left {
       width: 50%;
       position: relative;
-      background-color: #eee;
       @media (max-width: $maxPhoneWidth) {
         width: 100%;
       }
@@ -824,34 +1027,36 @@
         width: 90%;
       }
     }
+    .greyBox {
+      position: relative;
+      height: 100%;
+      background-color: #eee;
+    }
     .preview {
-      @media (max-width: $maxPhoneWidth) {
-        max-height: 300px;
-      }
+      width: 100%;
+      overflow-x: hidden;
       img {
         display: block;
         width: 100%;
         @media (max-width: $maxPhoneWidth) {
           width: auto;
-          height: 100%;
-          max-height: 300px;
+          max-width: 100%;
+          max-height: 420px;
           margin: 0 auto;
         }
       }
       button {
         box-sizing: border-box;
-        position: absolute;
-        bottom: 0;
-        left: 0;
         width: 100%;
-        height: 40px;
-        font-size: 18px;
+        height: 30px;
+        font-size: 16px;
         border: 1px solid #999;
         background: rgba($color: #ccc, $alpha: 0.3);
         cursor: pointer;
         transition: all 0.3s;
         @media (max-width: $maxPhoneWidth) {
-          height: 30px;
+          height: 26px;
+          font-size: 14px;
         }
         &:hover {
           background: rgba($color: #ccc, $alpha: 0.7);
@@ -877,7 +1082,7 @@
       @media (max-width: $maxPhoneWidth) {
         width: 100%;
         padding-left: 0;
-        padding-top: 15px;
+        padding-top: 25px;
       }
       input {
         text-align: left;
@@ -900,6 +1105,16 @@
           width: 120px;
         }
       }
+      .policy {
+        color: #474747;
+        font-size: 14px;
+        i {
+          margin-right: 6px;
+        }
+        a {
+          color: $yellow;
+        }
+      }
       .tip {
         font-size: 14px;
         color: #979797;
@@ -908,14 +1123,20 @@
     .portrait {
       overflow: hidden;
       margin-bottom: 20px;
-      img {
+      .gender {
         float: left;
+        width: 70px;
+      }
+      img {
         height: 60px;
       }
       .btnBox {
         float: left;
         padding: 15px 0;
         margin-left: 30px;
+        @media (max-width: $maxPhoneWidth) {
+          margin-left: 10px;
+        }
       }
       .btns {
         width: 100px;
@@ -923,6 +1144,10 @@
         line-height: 30px;
         font-size: 14px;
         font-weight: 600;
+        @media (max-width: $maxPhoneWidth) {
+          width: 90px;
+          font-size: 12px;
+        }
       }
     }
     .optImg {
@@ -970,6 +1195,7 @@
       }
     }
     .right {
+      width: 55%;
       padding-left: 50px;
       @media (max-width: $maxPhoneWidth) {
         width: 100%;
@@ -1004,8 +1230,19 @@
       float: right;
       height: 40px;
       padding: 5px 0;
+      border: none;
+      outline: none;
+      background: transparent;
       img {
-        height: 30px;
+        height: 25px;
+      }
+      span {
+        display: inline-block;
+        font-size: 14px;
+        line-height: 14px;
+        color: #474747;
+        font-weight: 600;
+        margin-left: 10px;
       }
     }
     .titl {
@@ -1027,6 +1264,7 @@
       padding-top: 1rem;
     }
     .fleft {
+      padding-right: 10px;
       img {
         width: 100px;
       }
@@ -1053,11 +1291,10 @@
         line-height: 30px;
         vertical-align: bottom;
       }
-    }
-    .facebook {
-      height: 30px;
-      margin-left: 18px;
-      vertical-align: bottom;
+      .share {
+        height: 30px;
+        margin-left: 15px;
+      }
     }
   }
 
@@ -1073,6 +1310,7 @@
       border: 0;
     }
   }
+
   .input {
     position: relative;
     overflow: hidden;
@@ -1090,7 +1328,7 @@
       color: #474747;
       font-size: 14px;
       text-align: center;
-      white-space: nowrap;
+      white-space: normal;
       text-overflow: ellipsis;
       margin: 0;
       padding: 0 15px;
@@ -1103,7 +1341,12 @@
         border: 1px solid #2684ff;
       }
     }
+    textarea {
+      line-height: 24px;
+      padding: 5px 15px;
+    }
   }
+
   :global {
     .modalClose {
       position: absolute;

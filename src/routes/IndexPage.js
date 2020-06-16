@@ -63,6 +63,10 @@ class IndexPage extends React.Component {
             <h2 onClick={this.goto('/MothersDay')}>MothersDay</h2>
             <h2 onClick={this.goto('/MothersDayUk')}>MothersDayUk</h2>
           </li>
+          <li>
+            <h2 onClick={this.goto('/Friendbuy')}>Friendbuy</h2>
+            <h2 onClick={this.goto('/ProductNan')}>ProductNan</h2>
+          </li>
         </ul>
       </div>
     );
