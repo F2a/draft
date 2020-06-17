@@ -106,6 +106,15 @@ class A2616 extends React.Component {
     const action = this.scrollAction(scrollTop, "top");
     if (scrollTop > Carousel) {
       const gap = (scrollTop - Carousel) / screenHeight;
+      const distance = scrollTop - Carousel;
+      if (distance >= 4 * screenHeight) {
+        window.clearTimeout(this.timer);
+        this.timer = window.setTimeout(() => this.setState({ Battery: true }), 300);
+      } else {
+        window.clearTimeout(this.timer);
+        this.timer = window.setTimeout(() => this.setState({ Battery: false }), 100);
+      }
+
       this.setState({
         gap: gap > 0.5 ? 0.5 : gap,
         distance: scrollTop - Carousel,
@@ -198,7 +207,6 @@ class A2616 extends React.Component {
         },
       ],
     };
-    console.log("current", current);
     return (
       <div className={styles.A2616}>
         <div className={styles.section1}>
@@ -311,7 +319,10 @@ class A2616 extends React.Component {
                           className={`${styles.img} ${
                             current === -1 && styles.show
                           }`}
-                          src={lang.pro || 'https://dz02g1kgtiysz.cloudfront.net/deals/files/200615_141859_-24.png'}
+                          src={
+                            lang.pro ||
+                            "https://dz02g1kgtiysz.cloudfront.net/deals/files/200615_141859_-24.png"
+                          }
                           alt=""
                         />
                       }
@@ -329,19 +340,21 @@ class A2616 extends React.Component {
                             alt=""
                           />
                         ))}
-                      {current > -1 && <div className={styles.progressBox}>
-                        <img
-                          src="https://dz02g1kgtiysz.cloudfront.net/deals/files/200616_193136_c1.png"
-                          alt=""
-                        />
-                        <div className={styles.progress}>
-                          <b
-                            className={`${styles.bluebar} ${
-                              styles[`bluebar${current}`]
-                            }`}
+                      {current > -1 && (
+                        <div className={styles.progressBox}>
+                          <img
+                            src="https://dz02g1kgtiysz.cloudfront.net/deals/files/200616_193136_c1.png"
+                            alt=""
                           />
+                          <div className={styles.progress}>
+                            <b
+                              className={`${styles.bluebar} ${
+                                styles[`bluebar${current}`]
+                              }`}
+                            />
+                          </div>
                         </div>
-                      </div>}
+                      )}
                     </div>
                   </div>
                 </div>
@@ -360,11 +373,19 @@ class A2616 extends React.Component {
               />
               <div className={styles.content}>
                 <section className={styles.stickbody}>
-                  <img
-                    className={styles.Battery}
-                    src="https://dz02g1kgtiysz.cloudfront.net/deals/files/200616_110147_1.gif"
-                    alt=""
-                  />
+                  {this.state.Battery ? (
+                    <img
+                      className={styles.Battery}
+                      src="https://dz02g1kgtiysz.cloudfront.net/deals/A2616/200617_110512_.gif"
+                      alt=""
+                    />
+                  ) : (
+                    <img
+                      className={styles.Battery}
+                      src="https://dz02g1kgtiysz.cloudfront.net/deals/A2616/200617_111016_1.png"
+                      alt=""
+                    />
+                  )}
                   <h1>
                     Less Charge Time <br />
                     More You Time
@@ -563,7 +584,6 @@ class A2616 extends React.Component {
             </div>
           </section>
         </div>
-     
       </div>
     );
   }
