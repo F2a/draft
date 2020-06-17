@@ -7,7 +7,7 @@ class A2616 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      current: 0,
+      current: -1,
       data: [1, 12, 13, 1, 1, 13, 1, 11, 1, 1],
       lang: {
         screenProduct: [1, 1, 1, 1, 1, 1, 1, 11, 1, 1, 1, 1, 1, 1, 1, 11, 1, 1],
@@ -20,7 +20,7 @@ class A2616 extends React.Component {
           p:
             "Smarter connector end design & bulletproof fibercore ensured this cable to<br/>be 35x more durable.",
           img:
-            "https://dz02g1kgtiysz.cloudfront.net/deals/files/200615_141859_-24.png",
+            "https://dz02g1kgtiysz.cloudfront.net/deals/files/200616_193136_c1.png",
         },
         {
           h1: "Anti-Rust ",
@@ -81,45 +81,52 @@ class A2616 extends React.Component {
 
   getElementTop = (element) => {
     let actualTop = element.offsetTop;
-    let current = element.offsetParent;
-    while (current !== null && current.offsetTop > 0) {
-      actualTop += current.offsetTop;
-      current = current.offsetParent;
+    let c = element.offsetParent;
+    while (c !== null && c.offsetTop > 0) {
+      actualTop += c.offsetTop;
+      c = c.offsetParent;
     }
     return actualTop;
   };
-  scrollAction = (current, act) => {
+  scrollAction = (c, act) => {
     const action =
       {
         top: this.state.scrollTop,
         left: this.state.scrollLeft,
       }[act] || this.state.scrollTop;
-    return current > action;
+    return c > action;
   };
 
   scrollevent = (e) => {
-    const { screenHeight = 600, Carousel = 600, textList } = this.state;
+    const { screenHeight = 600, Carousel = 600 } = this.state;
     const scrollTop =
       document.documentElement.scrollTop ||
       document.body.scrollTop ||
       window.pageYOffset;
     const action = this.scrollAction(scrollTop, "top");
     if (scrollTop > Carousel) {
-      // 半屏高度 gap === 0.5 时 展示下一屏
       const gap = (scrollTop - Carousel) / screenHeight;
+      this.setState({
+        gap: gap > 0.5 ? 0.5 : gap,
+        distance: scrollTop - Carousel,
+      });
+    } else {
+      this.setState({
+        gap: 0,
+      });
+    }
+    if (scrollTop - screenHeight > Carousel) {
+      // 半屏高度 gap === 0.5 时 展示下一屏
       const i =
         scrollTop - screenHeight > Carousel
           ? Math.floor((scrollTop - screenHeight - Carousel) / screenHeight)
           : 0;
       this.setState({
         current: i >= 2 ? 2 : i,
-        gap: gap > 0.5 ? 0.5 : gap,
-        distance: scrollTop - Carousel,
       });
     } else {
       this.setState({
-        current: 0,
-        gap: 0,
+        current: -1,
       });
     }
     this.setState({ scrollTop, action });
@@ -156,7 +163,7 @@ class A2616 extends React.Component {
       questions = [],
       screenHeight,
       textList,
-      current = 1,
+      current = -1,
       distance,
       gap,
       openList = [],
@@ -191,6 +198,7 @@ class A2616 extends React.Component {
         },
       ],
     };
+    console.log("current", current);
     return (
       <div className={styles.A2616}>
         <div className={styles.section1}>
@@ -251,7 +259,7 @@ class A2616 extends React.Component {
           style={{
             height: this.isIE()
               ? `${screenHeight}px`
-              : `${screenHeight * 5 + screenHeight}px`,
+              : `${screenHeight * 6 + screenHeight}px`,
           }}
         >
           <div className={styles.stickyBox}>
@@ -298,6 +306,15 @@ class A2616 extends React.Component {
                     className={styles.imgBox}
                   >
                     <div className={styles.box}>
+                      {
+                        <img
+                          className={`${styles.img} ${
+                            current === -1 && styles.show
+                          }`}
+                          src={lang.pro || 'https://dz02g1kgtiysz.cloudfront.net/deals/files/200615_141859_-24.png'}
+                          alt=""
+                        />
+                      }
                       {textList &&
                         textList.map((v, i) => (
                           <img
@@ -312,8 +329,11 @@ class A2616 extends React.Component {
                             alt=""
                           />
                         ))}
-                      <div className={styles.progressBox}>
-                        <img src="https://dz02g1kgtiysz.cloudfront.net/deals/files/190823_104200_5bd124cd884b12c0d9dcfc7b72f923f2.jpg" alt=""/>
+                      {current > -1 && <div className={styles.progressBox}>
+                        <img
+                          src="https://dz02g1kgtiysz.cloudfront.net/deals/files/200616_193136_c1.png"
+                          alt=""
+                        />
                         <div className={styles.progress}>
                           <b
                             className={`${styles.bluebar} ${
@@ -321,7 +341,7 @@ class A2616 extends React.Component {
                             }`}
                           />
                         </div>
-                      </div>
+                      </div>}
                     </div>
                   </div>
                 </div>

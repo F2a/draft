@@ -244,13 +244,13 @@ $blue: #00a9e1;
         transform: translateX(-50%);
       }
       &:nth-child(1) {
-        top: 10%;
+        top: 12%;
         @media (max-width: $maxPhoneWidth) {
           top: auto;
         }
       }
       &:nth-child(2) {
-        top: 50%;
+        top: 51%;
         transform: translateY(-50%);
         @media (max-width: $maxPhoneWidth) {
           top: auto;
@@ -334,7 +334,7 @@ $blue: #00a9e1;
       }
       .progressBox {
         position: absolute;
-        border-radius: 26%;
+        border-radius: 8%;
         overflow: hidden;
         img {
           width: 100%;
@@ -349,7 +349,7 @@ $blue: #00a9e1;
       }
       .progress {
         display: none;
-        height: 80%;
+        height: 100%;
         position: absolute;
         top: 50%;
         right: 0;
@@ -370,8 +370,7 @@ $blue: #00a9e1;
             top: 0;
           }
           &.bluebar1 {
-            top: 40%;
-            height: 20%;
+            top: 35%;
           }
           &.bluebar2 {
             top: 70%;
