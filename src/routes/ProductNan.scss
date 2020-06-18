@@ -14,27 +14,13 @@ $blue: #00a9e1;
     }
   }
 
-  h2 {
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 1.1;
-    text-align: center;
-    margin: 0;
-
-    @media (max-width: $maxPhoneWidth) {
-      font-size: 18px;
-    }
-  }
-
   h3 {
-    color: #ff83a3;
-    font-size: 20px;
+    font-size: 46px;
     font-weight: 600;
     text-align: center;
-    margin: 0;
 
     @media (max-width: $maxPhoneWidth) {
-      font-size: 18px;
+      font-size: 24px;
     }
   }
 
@@ -102,7 +88,7 @@ $blue: #00a9e1;
       padding: 10px 20px;
       @media (max-width: $maxPhoneWidth) {
         padding: 10px;
-        margin-top: 1rem;
+        margin-top: 1.5rem;
       }
       img {
         display: block;
@@ -115,6 +101,7 @@ $blue: #00a9e1;
         margin-top: 2rem;
         text-align: center;
         @media (max-width: $maxPhoneWidth) {
+          margin-top: 1rem;
           font-size: 15px;
         }
         i {
@@ -132,7 +119,8 @@ $blue: #00a9e1;
     width: 100%;
     color: #fff;
     background-color: #000;
-    .title {
+    .title,
+    .carousetitle {
       width: 100%;
       position: absolute;
       top: 50%;
@@ -142,23 +130,24 @@ $blue: #00a9e1;
       h1 {
         height: 60px;
         line-height: 60px;
-        font-size: 42px;
+        font-size: 52px;
         font-weight: 600;
         text-align: center;
         margin-bottom: 10px;
         padding-right: 5%;
-        @media (max-width: $maxPhoneWidth) {
+        @media (max-width: $minPadWidth) {
           height: 40px;
           line-height: 40px;
           font-size: 28px;
+          padding-right: 0;
         }
       }
       i {
         display: block;
-        font-size: 21px;
+        font-size: 20px;
         text-align: center;
         font-style: normal;
-        @media (max-width: $maxPhoneWidth) {
+        @media (max-width: $minPadWidth) {
           font-size: 16px;
         }
       }
@@ -168,20 +157,16 @@ $blue: #00a9e1;
     }
     .stickyBox {
       position: sticky;
-      top: 108px;
+      top: 70px;
       overflow: hidden;
+      @media (max-width: $minPadWidth) {
+        top: 70px;
+      }
     }
     .stickyBoxsection {
       max-width: 1000px;
       margin: 0 auto;
       position: relative;
-    }
-    .stickyBoxsection,
-    .carouselshow {
-      padding-top: 6rem;
-      @media (max-width: $maxPhoneWidth) {
-        padding-top: 3rem;
-      }
     }
     .carousel {
       position: absolute;
@@ -190,14 +175,30 @@ $blue: #00a9e1;
       left: 0;
       right: 0;
       transform-origin: 50% 50%;
-      transform: translate(140px, -15px) scale(0.07);
+      transform: translate(140, -15px) scale(0.07);
       transition: all 500ms;
       margin-top: 5px;
-      @media (max-width: $maxPhoneWidth) {
-        transform: translate(125px, -5px) scale(0.07);
+      @media (max-width: $minPadWidth) {
+        transform: translate(110px, -5px) scale(0.07);
       }
       .textBox {
         opacity: 0;
+      }
+    }
+    .carousetitle {
+      opacity: 0;
+      top: 4%;
+      transform: translate(-50%, 0);
+      h1 {
+        font-size: 40px;
+        margin-bottom: 0;
+        padding: 0;
+        @media (max-width: $maxPhoneWidth) {
+          font-size: 26px;
+        }
+      }
+      &.show{
+        opacity: 1;
       }
     }
     .carouselshow {
@@ -206,12 +207,19 @@ $blue: #00a9e1;
       bottom: 0;
       left: 0;
       right: 0;
+      padding-top: 10rem;
+      @media (max-width: $minPadWidth) {
+        padding-top: 10rem;
+      }
       .textBox {
         opacity: 1;
       }
     }
     .carouselcontent {
       position: relative;
+      @media (max-width: $maxPhoneWidth) {
+        max-height: 580px;
+      }
     }
     .line {
       display: block;
@@ -222,13 +230,28 @@ $blue: #00a9e1;
     }
     .textBox {
       width: 45%;
+      height: 100%;
+      max-height: 730px;
       position: absolute;
-      top: 0;
-      bottom: 0;
+      top: 50%;
       left: 0;
+      transform: translateY(-50%);
       transition: all 500ms;
+      @media (max-width: $minPadWidth) {
+        width: 100%;
+        top: 0;
+        transform: translate(0, 68%);
+      }
+      @media (max-width: $minPadWidth) {
+        width: 75%;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 80%);
+      }
       @media (max-width: $maxPhoneWidth) {
         width: 100%;
+        top: 0;
+        transform: translate(0, 68%);
       }
     }
     .text {
@@ -236,75 +259,98 @@ $blue: #00a9e1;
       position: absolute;
       left: 0;
       transition: all 500ms;
+      @media (max-width: $minPadWidth) {
+        opacity: 0;
+        width: 85%;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+      }
       @media (max-width: $maxPhoneWidth) {
         opacity: 0;
         width: 85%;
         left: 50%;
-        bottom: 0;
+        top: 0;
         transform: translateX(-50%);
       }
       &:nth-child(1) {
         top: 12%;
-        @media (max-width: $maxPhoneWidth) {
-          top: auto;
+        @media (max-width: $minPadWidth) {
+          top: 0;
         }
       }
       &:nth-child(2) {
-        top: 51%;
+        top: 50%;
         transform: translateY(-50%);
-        @media (max-width: $maxPhoneWidth) {
-          top: auto;
+        @media (max-width: $minPadWidth) {
+          top: 0;
           transform: translateX(-50%);
         }
       }
       &:nth-child(3) {
-        bottom: 10%;
+        bottom: 0;
+        transform: translateY(-100%);
+        @media (max-width: $minPadWidth) {
+          top: 0;
+          bottom: auto;
+          transform: translateX(-50%);
+        }
         @media (max-width: $maxPhoneWidth) {
-          bottom: 0;
-          top: auto;
+          top: 0;
+          bottom: auto;
+          transform: translateX(-50%);
         }
       }
       p {
         opacity: 0;
         line-height: 1.5;
         transition: all 500ms;
-        @media (max-width: $maxPhoneWidth) {
+        @media (max-width: $minPadWidth) {
           opacity: 1;
         }
       }
       h1 {
         display: inline-block;
-        font-size: 18px;
+        font-size: 24px;
         text-align: left;
         padding-right: 20px;
         transition: all 500ms;
       }
       &.show {
-        @media (max-width: $maxPhoneWidth) {
+        @media (max-width: $minPadWidth) {
           opacity: 1;
         }
         p {
           opacity: 1;
+          font-size: 16px;
           text-align: left;
+          @media (max-width: $minPadWidth) {
+            font-size: 14px;
+            line-height: 1.3;
+          }
         }
         h1 {
           color: $blue;
-          font-size: 26px;
+          font-size: 36px;
           line-height: 1.5;
           font-weight: 600;
+          @media (max-width: $minPadWidth) {
+            font-size: 24px;
+          }
         }
         .line {
           width: 200px;
         }
       }
     }
+
     .imgBox {
       width: 55%;
       position: absolute;
       top: 0;
       bottom: 0;
       right: 0;
-      @media (max-width: $maxPhoneWidth) {
+      @media (max-width: $minPadWidth) {
         width: 100%;
       }
       .box {
@@ -322,6 +368,12 @@ $blue: #00a9e1;
         left: 0;
         transform: translateY(-50%);
         transition: all 500ms;
+        @media (max-width: $minPadWidth) {
+          width: 75%;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
         @media (max-width: $maxPhoneWidth) {
           width: 85%;
           top: 0;
@@ -334,11 +386,17 @@ $blue: #00a9e1;
       }
       .progressBox {
         position: absolute;
-        border-radius: 8%;
+        border-radius: 9%;
         overflow: hidden;
         img {
           width: 100%;
           opacity: 0;
+        }
+        @media (max-width: $minPadWidth) {
+          width: 75%;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
         }
         @media (max-width: $maxPhoneWidth) {
           width: 85%;
@@ -355,7 +413,7 @@ $blue: #00a9e1;
         right: 0;
         border-left: 6px solid #ccc;
         transform: translateY(-50%);
-        @media (max-width: $maxPhoneWidth) {
+        @media (max-width: $minPadWidth) {
           display: block;
         }
         .bluebar {
@@ -439,40 +497,78 @@ $blue: #00a9e1;
     }
     .stickbody {
       width: 100%;
+      text-align: center;
       position: absolute;
-      top: 46%;
+      top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
-      @media (max-width: $maxPhoneWidth) {
+      transform: translate(-50%, -75%);
+      @media (max-width: $minPadWidth) {
         top: 42%;
         width: 100%;
+        transform: translate(-50%, -65%);
       }
       .Battery {
         width: 80%;
-        max-width: 160px;
+        max-width: 200px;
         display: block;
         margin: 0 auto;
+        &.animat {
+          animation: animationSechide 1s ease-in 3.5s;
+          animation-fill-mode: forwards;
+        }
+        &.animat2 {
+          animation: animationSecShow 1s ease-in;
+          animation-fill-mode: forwards;
+        }
       }
       h1 {
-        max-width: 380px;
-        font-size: 42px;
+        max-width: 500px;
+        font-size: 46px;
         font-weight: 600;
         margin: 0 auto;
         margin-top: 4rem;
-        @media (max-width: $maxPhoneWidth) {
-          max-width: 240px;
-          font-size: 24px;
+        @media (max-width: $minPadWidth) {
+          max-width: 300px;
+          font-size: 36px;
+          margin-top: 2rem;
         }
       }
       p {
         max-width: 380px;
-        font-size: 16px;
+        font-size: 18px;
         text-align: center;
         margin: 0 auto;
-        margin-top: 1rem;
-        @media (max-width: $maxPhoneWidth) {
+        margin-top: 2rem;
+        @media (max-width: $minPadWidth) {
           max-width: 240px;
           font-size: 14px;
+        }
+      }
+      .shopnow {
+        position: relative;
+        display: inline-block;
+        color: $color;
+        font-size: 32px;
+        text-decoration: none;
+        text-align: center;
+        margin-top: 4rem;
+        &::after {
+          content: '';
+          opacity: 0;
+          display: block;
+          width: 100%;
+          height: 0;
+          border-bottom: 2px solid $color;
+          margin-top: 3px;
+        }
+        &:hover {
+          &::after {
+            opacity: 1;
+          }
+        }
+        @media (max-width: $minPadWidth) {
+          display: none;
+          font-size: 18px;
         }
       }
     }
@@ -482,12 +578,13 @@ $blue: #00a9e1;
       font-size: 16px;
       text-align: center;
       position: absolute;
-      bottom: 5%;
+      bottom: 8%;
       left: 50%;
       transform: translateX(-50%);
-      @media (max-width: $maxPhoneWidth) {
+      @media (max-width: $minPadWidth) {
+        bottom: 16%;
         max-width: 320px;
-        font-size: 14px;
+        font-size: 12px;
       }
     }
   }
@@ -533,10 +630,18 @@ $blue: #00a9e1;
   }
 
   .section3 {
-    padding: 4rem 0;
+    padding: 6rem 0;
     background-color: #fff;
+    @media (max-width: $maxPhoneWidth) {
+      padding: 4rem 0;
+    }
     .title {
-      margin-bottom: 2rem;
+      font-size: 46px;
+      margin-bottom: 5rem;
+      @media (max-width: $maxPhoneWidth) {
+        font-size: 24px;
+        margin-bottom: 2rem;
+      }
     }
     ul {
       width: 100%;
@@ -570,43 +675,71 @@ $blue: #00a9e1;
     }
   }
 
+  .section4 {
+    .reviews {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+
   .section5,
   .section6 {
     color: #fff;
     padding: 4rem 0;
     background-color: #000;
+    @media (max-width: $maxPhoneWidth) {
+      padding: 1rem 0;
+    }
     .section {
       width: 90%;
       margin: 0 auto;
     }
     .actionLine {
+      position: relative;
       cursor: pointer;
       overflow: hidden;
       border-bottom: 1px solid #888;
       &.actionLine1 {
-        font-size: 36px;
+        font-size: 46px;
         font-weight: 800;
         @media (max-width: $maxPhoneWidth) {
-          font-size: 20px;
+          font-size: 24px;
         }
       }
       &.actionLine2 {
-        color: #ccc;
-        font-size: 14px;
+        font-size: 18px;
         font-weight: 800;
+        .title {
+          color: #ccc;
+          &:hover {
+            color: #fff;
+          }
+        }
         .act {
-          font-size: 18px;
+          font-size: 21px;
+        }
+        @media (max-width: $maxPhoneWidth) {
+          font-size: 16px;
+          .act {
+            font-size: 18px;
+          }
         }
       }
       .title {
+        color: #fff;
         float: left;
-        line-height: 2;
-        padding: 5px 0;
+        line-height: 1.5;
+        padding: 10px 0;
+        padding-right: 15px;
       }
       .act {
-        float: right;
-        line-height: 2;
-        padding: 5px 0;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        right: 0;
+        line-height: 1.5;
+        padding: 10px 0;
         transition: all 500ms;
         &.open {
           transform: rotate(45deg);
@@ -615,9 +748,11 @@ $blue: #00a9e1;
     }
     .textLine {
       height: 0;
+      color: #aaa;
+      font-size: 16px;
+      line-height: 1.4;
       overflow: hidden;
       padding: 0;
-      line-height: 1.4;
       transition: all 500ms;
       &.open {
         height: auto;
@@ -628,17 +763,21 @@ $blue: #00a9e1;
   }
 
   .section6 {
-    color: #000;
+    color: #323232;
     background-color: #fff;
     .actionLine {
       cursor: pointer;
       overflow: hidden;
       border-bottom: 1px solid #aaa;
-    }
-    .act {
-      color: #999;
+      .title {
+        color: #323232;
+      }
+      .act {
+        color: #999;
+      }
     }
     .top {
+      color: #323232;
       margin-top: 6rem;
       display: flex;
       @media (max-width: $maxPhoneWidth) {
@@ -651,8 +790,8 @@ $blue: #00a9e1;
         }
       }
       .right {
+        color: #323232;
         width: 64%;
-        font-size: 16px;
         line-height: 1.5;
         padding-left: 15%;
         @media (max-width: $maxPhoneWidth) {
@@ -662,6 +801,8 @@ $blue: #00a9e1;
           padding-left: 10px;
         }
         b {
+          color: #323232;
+          font-size: 18px;
           display: inline-block;
           margin-bottom: 5px;
           @media (max-width: $maxPhoneWidth) {
@@ -669,6 +810,8 @@ $blue: #00a9e1;
           }
         }
         p {
+          color: #323232;
+          font-size: 18px;
           display: block;
           margin-bottom: 6%;
           @media (max-width: $maxPhoneWidth) {
@@ -676,8 +819,9 @@ $blue: #00a9e1;
           }
         }
         i {
+          color: #323232;
           display: block;
-          font-size: 12px;
+          font-size: 14px;
           font-style: normal;
           margin-bottom: 5px;
           @media (max-width: $maxPhoneWidth) {
@@ -687,9 +831,20 @@ $blue: #00a9e1;
       }
     }
     .bottom {
-      font-size: 16px;
+      font-size: 18px;
       margin-top: 2rem;
       line-height: 1.5;
+      b {
+        color: #323232;
+        font-size: 20px;
+      }
+      p {
+        color: #323232;
+        font-size: 18px;
+        @media (max-width: $maxPhoneWidth) {
+          font-size: 14px;
+        }
+      }
       @media (max-width: $maxPhoneWidth) {
         padding-left: 10px;
         b {
@@ -698,7 +853,21 @@ $blue: #00a9e1;
       }
     }
   }
-
   :global {
+    .serif {
+      font-family: sans-serif;
+      font-weight: 300;
+    }
+    #reviews {
+      padding-top: 0;
+      .customized_amazon {
+        padding-top: 0;
+        padding-bottom: 1rem;
+      }
+    }
+    #downloads {
+      background: #fff;
+    }
   }
 }
+

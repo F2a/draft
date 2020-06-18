@@ -109,10 +109,16 @@ class A2616 extends React.Component {
       const distance = scrollTop - Carousel;
       if (distance >= 4 * screenHeight) {
         window.clearTimeout(this.timer);
-        this.timer = window.setTimeout(() => this.setState({ Battery: true }), 300);
+        this.timer = window.setTimeout(
+          () => this.setState({ Battery: true }),
+          300
+        );
       } else {
         window.clearTimeout(this.timer);
-        this.timer = window.setTimeout(() => this.setState({ Battery: false }), 100);
+        this.timer = window.setTimeout(
+          () => this.setState({ Battery: false }),
+          100
+        );
       }
 
       this.setState({
@@ -196,14 +202,14 @@ class A2616 extends React.Component {
       ],
       carouselshow: [
         {
-          transform: `translate(${155 - gap * 2 * 155}px, ${
-            gap * 2 * 15 - 15
+          transform: `translate(${152 - gap * 2 * 152}px, ${
+            gap * 2 * 12 - 12
           }px) 
-          scale(${gap * 2 * 0.93 + 0.07})`,
+          scale(${gap * 2 * 0.93 + 0.05})`,
         },
         {
-          transform: `translate(${125 - gap * 2 * 125}px, ${gap * 2 * 5 - 5}px) 
-          scale(${gap * 2 * 0.93 + 0.07})`,
+          transform: `translate(${120 - gap * 2 * 120}px, ${gap * 2 * 6 - 6}px) 
+          scale(${gap * 2 * 0.93 + 0.06})`,
         },
       ],
     };
@@ -291,24 +297,20 @@ class A2616 extends React.Component {
                 style={transList.carouselshow[this.isMobile() ? 1 : 0]}
               >
                 <div
+                  className={`${styles.carousetitle} ${
+                    this.carouselshow() && styles.show
+                  }`}
+                >
+                  <h1>
+                    PowerPort III <span class="serif">Nano</span>
+                  </h1>
+                  <i class="serif">Small Yet Mighty</i>
+                </div>
+                <div
                   className={styles.carouselcontent}
                   style={{ height: `${screenHeight * 0.8}px` }}
                 >
-                  <div className={styles.textBox}>
-                    {textList &&
-                      textList.map((v, i) => (
-                        <div
-                          key={i}
-                          className={`${styles.text} ${
-                            i === current && styles.show
-                          }`}
-                        >
-                          <h1 dangerouslySetInnerHTML={{ __html: v.h1 }} />
-                          <span className={styles.line} />
-                          <p dangerouslySetInnerHTML={{ __html: v.p }} />
-                        </div>
-                      ))}
-                  </div>
+                  
                   <div
                     style={{ height: `${screenHeight * 0.8}px` }}
                     className={styles.imgBox}
@@ -357,6 +359,23 @@ class A2616 extends React.Component {
                       )}
                     </div>
                   </div>
+
+                  <div className={styles.textBox}>
+                    {textList &&
+                      textList.map((v, i) => (
+                        <div
+                          key={i}
+                          className={`${styles.text} ${
+                            i === current && styles.show
+                          }`}
+                        >
+                          <h1 dangerouslySetInnerHTML={{ __html: v.h1 }} />
+                          <span className={styles.line} />
+                          <p dangerouslySetInnerHTML={{ __html: v.p }} />
+                        </div>
+                      ))}
+                  </div>
+                
                 </div>
               </div>
             </section>
@@ -373,19 +392,19 @@ class A2616 extends React.Component {
               />
               <div className={styles.content}>
                 <section className={styles.stickbody}>
-                  {this.state.Battery ? (
-                    <img
-                      className={styles.Battery}
-                      src="https://dz02g1kgtiysz.cloudfront.net/deals/A2616/200617_110512_.gif"
-                      alt=""
-                    />
-                  ) : (
-                    <img
-                      className={styles.Battery}
-                      src="https://dz02g1kgtiysz.cloudfront.net/deals/A2616/200617_111016_1.png"
-                      alt=""
-                    />
-                  )}
+                  <img
+                    className={`${styles.Battery} ${
+                      distance >= 4 * screenHeight
+                        ? styles.animat
+                        : styles.animat2
+                    }`}
+                    src={
+                      this.state.Battery
+                        ? "https://dz02g1kgtiysz.cloudfront.net/deals/A2616/200617_110512_.gif"
+                        : "https://dz02g1kgtiysz.cloudfront.net/deals/A2616/200617_111016_1.png"
+                    }
+                    alt=""
+                  />
                   <h1>
                     Less Charge Time <br />
                     More You Time
