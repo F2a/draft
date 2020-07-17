@@ -1,6 +1,7 @@
 import { connect } from "dva";
 import React from "react";
 import utils from "../utils/utils";
+import moment from 'moment';
 import styles from "./ProductNan.scss";
 
 class A2616 extends React.Component {
@@ -64,6 +65,8 @@ class A2616 extends React.Component {
     this.resize();
     window.addEventListener("resize", () => utils.throttle(this.resize, 500));
     window.addEventListener("scroll", utils.throttle(this.scrollevent, 200));
+    console.log('moment',  moment());
+    console.log('date',   moment.duration(moment() - Date.now(), 'milliseconds'));
   }
 
   componentWillUnmount() {}
