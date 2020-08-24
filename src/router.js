@@ -19,6 +19,7 @@ import MothersDay from './routes/MothersDay';
 import MothersDayUk from './routes/MothersDayUk';
 import Friendbuy from './routes/Friendbuy';
 import ProductNan from './routes/ProductNan';
+import Eufyrefrral from './routes/Eufyrefrral';
 
 function RouterConfig({ history }) {
   return (
@@ -43,6 +44,7 @@ function RouterConfig({ history }) {
         <Route path="/MothersDayUk" exact component={MothersDayUk} />
         <Route path="/Friendbuy" exact component={Friendbuy} />
         <Route path="/ProductNan" exact component={ProductNan} />
+        <Route path="/Eufyrefrral" exact component={Eufyrefrral} />
       </Switch>
     </Router>
   );
